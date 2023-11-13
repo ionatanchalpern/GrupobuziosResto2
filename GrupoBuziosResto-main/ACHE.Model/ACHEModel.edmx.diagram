@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="37c033978caa41d388874fcc87192550" Name="Diagram1" ZoomLevel="64">
+        <EntityTypeShape EntityType="ACHE.Model.LugaresTraslados" Width="1.5" PointX="3" PointY="6.25" />
+        <EntityTypeShape EntityType="ACHE.Model.Menues" Width="1.5" PointX="7.5" PointY="15.5" />
+        <EntityTypeShape EntityType="ACHE.Model.Pedidos" Width="1.5" PointX="5.25" PointY="1.75" />
+        <EntityTypeShape EntityType="ACHE.Model.PedidosDetalle" Width="1.5" PointX="7.5" PointY="1.625" />
+        <EntityTypeShape EntityType="ACHE.Model.Proveedores" Width="1.5" PointX="0.75" PointY="8.375" />
+        <EntityTypeShape EntityType="ACHE.Model.Restaurantes" Width="1.5" PointX="5.25" PointY="14.625" />
+        <EntityTypeShape EntityType="ACHE.Model.Usuarios" Width="1.5" PointX="3" PointY="0.75" />
+        <EntityTypeShape EntityType="ACHE.Model.UsuariosAdmin" Width="1.5" PointX="8.75" PointY="6.5" />
+        <AssociationConnector Association="ACHE.Model.FK__LugaresTr__IDPro__4E88ABD4" />
+        <AssociationConnector Association="ACHE.Model.FK_Menues_Restaurantes" />
+        <AssociationConnector Association="ACHE.Model.FK_Pedidos_Usuarios" />
+        <AssociationConnector Association="ACHE.Model.FK_PedidosDetalle_Pedidos" />
+        <AssociationConnector Association="ACHE.Model.FK_PedidosDetalle_Restaurantes" />
+        <EntityTypeShape EntityType="ACHE.Model.Parametros" Width="2.625" PointX="8.75" PointY="9.5" />
+        <EntityTypeShape EntityType="ACHE.Model.Productos" Width="1.5" PointX="5.25" PointY="19.875" />
+        <AssociationConnector Association="ACHE.Model.FK_PedidosDetalle_Productos" />
+        <EntityTypeShape EntityType="ACHE.Model.PasajerosPorPedidoTraslado" Width="1.5" PointX="8.5" PointY="12.375" />
+        <EntityTypeShape EntityType="ACHE.Model.SubTipos" Width="1.5" PointX="10.375" PointY="0.875" />
+        <EntityTypeShape EntityType="ACHE.Model.PedidosTraslado" Width="1.5" PointX="12.25" PointY="4.125" />
+        <AssociationConnector Association="ACHE.Model.FK_PedidosTraslado_LugaresTraslados" />
+        <AssociationConnector Association="ACHE.Model.FK_PedidosTraslado_LugaresTraslados1" />
+        <AssociationConnector Association="ACHE.Model.FK_PasajerosPorPedidoTraslado_PedidosTraslado" />
+        <AssociationConnector Association="ACHE.Model.FK_PedidosTraslado_Usuarios" />
+        <EntityTypeShape EntityType="ACHE.Model.Servicios" Width="1.5" PointX="14.625" PointY="4.125" />
+        <AssociationConnector Association="ACHE.Model.FK_PedidosTraslado_Servicios" />
+        <AssociationConnector Association="ACHE.Model.FK__Servicios__IDPro__30F848ED" />
+        <AssociationConnector Association="ACHE.Model.FK_Servicios_SubTipos" />
+        <EntityTypeShape EntityType="ACHE.Model.PreciosProductos" Width="1.5" PointX="7.5" PointY="20.5" />
+        <AssociationConnector Association="ACHE.Model.FK__PreciosPr__IDPro__5CD6CB2B" />
+        <EntityTypeShape EntityType="ACHE.Model.PreciosServicios" Width="1.5" PointX="16.875" PointY="4.75" />
+        <AssociationConnector Association="ACHE.Model.FK__PreciosSe__IDSer__6FE99F9F" />
+        <AssociationConnector Association="ACHE.Model.FK__PreciosSe__IDUsu__02FC7413" />
+        </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

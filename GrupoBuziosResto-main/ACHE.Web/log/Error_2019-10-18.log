@@ -1,0 +1,12 @@
+Fecha: 18/10/2019 12:55:24 
+Error: Ya existe un precio creado para esa fecha
+Detalle: System.Exception: Ya existe un precio creado para esa fecha
+   en admin_modulos_custom_preciosServiciosOperadorese.CreateEntity() en c:\Users\Kevin\Documents\_LOCAL\grupobuziosresto\ACHE.Web\admin\modulos\custom\preciosServiciosOperadorese.aspx.cs:línea 242
+   en admin_modulos_custom_preciosServiciosOperadorese.Process() en c:\Users\Kevin\Documents\_LOCAL\grupobuziosresto\ACHE.Web\admin\modulos\custom\preciosServiciosOperadorese.aspx.cs:línea 129
+^^-------------------------------------------------------------------^^
+Fecha: 18/10/2019 12:55:45 
+Error: Ya existe un precio creado para esa fecha
+Detalle: System.Exception: Ya existe un precio creado para esa fecha
+   en admin_modulos_custom_preciosServiciosOperadorese.CreateEntity() en c:\Users\Kevin\Documents\_LOCAL\grupobuziosresto\ACHE.Web\admin\modulos\custom\preciosServiciosOperadorese.aspx.cs:línea 242
+   en admin_modulos_custom_preciosServiciosOperadorese.Process() en c:\Users\Kevin\Documents\_LOCAL\grupobuziosresto\ACHE.Web\admin\modulos\custom\preciosServiciosOperadorese.aspx.cs:línea 129
+^^-------------------------------------------------------------------^^

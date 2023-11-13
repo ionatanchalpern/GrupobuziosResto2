@@ -1,0 +1,99 @@
+function RefreshGrid(grid) {
+    var masterTable = $find(grid).get_masterTableView();
+    masterTable.rebind();
+}
+
+
+function GetRadWindow()
+{
+    var oWindow = null;
+    if (window.radWindow) oWindow = window.radWindow;
+    else if (window.frameElement.radWindow) oWindow = window.frameElement.radWindow;
+    else if (window.parent.frameElement.radWindow) oWindow = window.parent.frameElement.radWindow;
+    //alert(oWindow);
+    return oWindow;
+} 
+
+function CloseAndRebindGrid(args)
+{
+    //debugger;
+    GetRadWindow().Close();
+    GetRadWindow().BrowserWindow.refreshGrid(args);
+}
+
+function CloseRadWindow()
+{
+	//debugger;
+	GetRadWindow().Close();
+}
+
+function SizeToFit()
+{
+	window.setTimeout(
+		function()
+		{
+			var oWnd = GetRadWindow();
+			oWnd.SetWidth(document.body.scrollWidth + 15);
+			oWnd.SetHeight(document.body.scrollHeight + 100);
+	        
+		}, 400);
+}
+
+function SizeToFitWidth()
+{
+	window.setTimeout(
+		function()
+		{
+			var oWnd = GetRadWindow();
+			oWnd.SetWidth(document.body.scrollWidth + 15);
+			//oWnd.SetHeight(document.body.scrollHeight + 100);
+	        
+		}, 400);
+}
+
+function OpenPopUp(url, Height, Width)
+{
+	var newUrl = url.toString();
+	if(newUrl != "")
+	{
+		if(Height=="0")
+			Height="500";
+		if(Width=="0")
+			Width="500";
+			
+		if(window.screen){
+			var myLeft = (screen.width-Width)/2;
+			var myTop = (screen.height-Height)/2;
+			window.open(""+newUrl+"","","width="+Width+",height="+Height+",top="+myTop+",left="+myLeft+",menubar=no,scrollbars=yes");
+		}
+		else
+		{
+			window.open(""+newUrl+"","","width="+Width+",height="+Height+",top=150,left=250,menubar=no,scrollbars=yes");
+		}
+	}	
+}
+
+function ShowPopUp(url, title, width, height)
+{
+	//debugger;
+	var ow = window.radopen(root + url, "RadWindow1");
+	ow.set_title(title);
+	ow.SetWidth(width);
+	ow.SetHeight(height);
+	ow.center();
+	
+	return false;
+}
+
+function ShowPopUpMaximized(url, title) {
+    //debugger;
+    var ow = window.radopen(root + url, "RadWindow1");
+    ow.set_title(title);
+    //ow.SetWidth(width);
+    //ow.SetHeight(height);
+    ow.center();
+    ow.maximize();
+    
+    return false;
+}
+

@@ -1,0 +1,107 @@
+﻿<div style="width: 600px;font-family: arial,sans-serif;">
+    <div style="border: 1px solid black;">
+        <div style="padding: 10px;font-family: arial,sans-serif;">
+			<table style="width:100%">
+				<tr>
+					<td><img src='http://www.grupobuziosresto.com/files/logos/<LOGO>' style="max-width:200px" /></td>
+					<td><h3>DETALLES DEL SERVICIO</h3></td>
+					<td style="text-align:right">
+						<p>
+							Modificado el d&iacute;a:
+						</p>
+						<p>
+							<FECHAGENERACION>
+						</p>
+					</td>
+				</tr>
+			</table>
+
+            <br />
+            <hr style="border: 2px solid #4b1534;"></hr>
+        </div>
+        <div style="padding: 10px;font-family: arial,sans-serif;">
+            <table>
+                <tbody>
+                    <tr>
+						<td colspan="2"><p><strong>C&oacute;digo de la reserva: #<ID></strong></p></td>
+					</tr>
+					<tr>
+                        <td style="width: 300px;vertical-align:top">
+                            <p>Operador Resposable: <EMPRESA></p>
+                            <p>Operadora: <EMPRESA></p>
+                            <p>Usuario: <USUARIOOPERADOR></p>
+                            <p>Email: <EMAILOPERADOR></p>
+                        </td>
+                        <td style="width: 300px;vertical-align:top">
+                            <p>Estado: Pendiente Confirmaci&oacute;n</p>
+                            <p>Fecha de Reserva: <FECHARESERVA></p>
+                            <p>Fecha de Cancelaci&oacute;n: </p>
+                            <p></p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div style="padding: 10px;font-family: arial,sans-serif;">
+            <h3>TRASLADOS</h3>
+            <hr style="border: 2px solid #4b1534;" />
+            <br />
+            <p>Transportista: <PROVEEDOR></p>
+            <p>Servicio de Traslado: <SERVICIO></p>
+            <p><LABELIDAVUELTA>: <IDAVUELTA></p>
+            <p>Servicio: <TIPOSERVICIO></p>
+			<p>Fecha: <FECHAARRIBO></p>
+        </div>
+        <div style="padding: 10px;font-family: arial,sans-serif;">
+            <h3>IDA</h3>
+            <hr style="border: 2px solid #4b1534;" />
+            <br />
+            <table>
+                <tbody>
+                    <tr>
+                        <td style="width: 300px;vertical-align:top">
+                            <p>Hotel: <HOTELORIGEN></p>
+                            <p>Observaciones: <OBSERVACIONESORIGEN></p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div style="padding: 10px;font-family: arial,sans-serif;">
+           <h3>VUELTA</h3>
+            <hr style="border: 2px solid #4b1534;" />
+            <table>
+                <tbody>
+                    <tr>
+                        <td style="width: 300px;vertical-align:top">
+                            <p>Hotel: <HOTELDESTINO></p>
+                            <p>Observaciones: <OBSERVACIONESDESTINO></p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div style="padding: 10px;font-family: arial,sans-serif;">
+            <h3>DATOS DEL PASAJERO</h3>
+            <hr style="border: 2px solid #4b1534;" />
+            <br />
+            <p>Nombre: <PASAJERO></p>
+            <p>Cantidad de Adultos: <CANTADULTOS></p>
+            <p>Cantidad de Menores que ocupan Asiento: <CANTMENORES1></p>
+            <p>Cantidad de Menores gratis hasta 3 a&ntilde;os: <CANTMENORES2></p>
+			<INFOPASAJEROS>
+            <p>Observaciones: <OBSERVACIONES></p>
+            <br />
+        </div>
+    </div>
+    <br />
+    <br />
+    <div style="font-family: arial,sans-serif;">
+        <a href='http://www.grupobuziosresto.com/confirmar-traslado.aspx?IdPedido=<IDPEDIDO>&IdProveedor=<IDPROVEEDOR>' style="background: #ca4d4a; border: 0; text-transform: uppercase; color: white; font-size: 22px; padding: 5px 8px; line-height: 22px; vertical-align: middle; text-decoration: none; cursor: pointer;">CONFIRMAR RESERVA</a>
+		<br>	<br>
+	<p>Click aquí para CONFIRMAR la Reserva realizada por el operador.	<br>
+	Dê click aqui para CONFIRMAR a reserva realizada pelo operador.</p>
+    </div>
+	<br />
+	<br />
+</div>

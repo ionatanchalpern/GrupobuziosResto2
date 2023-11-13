@@ -1,0 +1,1299 @@
+/* Import fonts, colors, and complex CSS styles */
+/* Cuprum font family */
+@import url(http://fonts.googleapis.com/css?family=Cuprum:400,400italic,700,700italic);
+/* Arial font family and fallbacks */
+/* Open Sans Extra Bold */
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:800);
+/* Intro font family */
+@font-face {
+  font-family: 'IntroRegular';
+  src: url("../fonts/intro.eot");
+  src: url("../fonts/intro.eot") format("embedded-opentype"), url("../fonts/intro.woff2") format("woff2"), url("../fonts/intro.woff") format("woff"), url("../fonts/intro.ttf") format("truetype"), url("../fonts/intro.svg#IntroRegular") format("svg"); }
+/* Start site's custom styles */
+.top-bar {
+  font-family: 'Cuprum', sans-serif;
+  background: #4b1534;
+  height: 48px;
+  text-align: right; }
+  .top-bar.logged-in span, .loginname {
+    font-size: 20px;
+    font-weight: bold;
+    color: #a97875;
+    display: inline-block;
+    padding-right: 15px;
+    border-right: 1px solid white; }
+  .top-bar.logged-in a {
+    text-transform: uppercase;
+    font-weight: normal;
+    color: white;
+    text-decoration: none;
+    font-size: 19px; }
+  .top-bar a {
+    text-transform: uppercase;
+    line-height: 32px;
+    padding: 0 10px;
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    min-width: 120px;
+    margin-top: 8px;
+    text-align: left;
+    font-size: 18px; }
+    .top-bar a.register {
+      border-right: 2px solid #a97875;
+      padding-left: 27px;
+      background: transparent url(../imgs/register-icon.png) no-repeat 5px 40%;
+      margin-right: 5px; }
+      .top-bar a.register:hover, .top-bar a.register:active, .top-bar a.register:focus {
+        background: #a97875 url(../imgs/register-icon-active.png) no-repeat 5px 40%; }
+    .top-bar a.access {
+      margin-left: 2px;
+      padding-left: 27px;
+      background: transparent url(../imgs/acces-icon-inactive.png) no-repeat 5px 40%; }
+      .top-bar a.access:hover, .top-bar a.access:active, .top-bar a.access:focus {
+        background: #a97875 url(../imgs/access-icon.png) no-repeat 5px 40%; }
+  .top-bar ul.dropdown-menu {
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    background: #a97875;
+    color: white;
+    left: auto;
+    right: 15px;
+    top: 46px; }
+    .top-bar ul.dropdown-menu li {
+      padding-left: 10px;
+      padding-right: 10px; }
+      .top-bar ul.dropdown-menu li:last-child a {
+        border: 0; }
+    .top-bar ul.dropdown-menu a {
+      color: white;
+      text-transform: uppercase;
+      border-bottom: 2px solid white;
+      margin: 0;
+      line-height: 32px;
+      padding-left: 10px;
+      padding-right: 10px; }
+      .top-bar ul.dropdown-menu a:hover, .top-bar ul.dropdown-menu a:focus, .top-bar ul.dropdown-menu a:active {
+        background: #4b1534; }
+
+.head {
+  border-bottom: 8px solid #4b1534; }
+
+.logo {
+  padding-top: 32px;
+  padding-bottom: 32px; }
+  .logo img {
+    max-width: 100%; }
+
+.logo-side-menu {
+  padding-top: 32px;
+  padding-bottom: 32px; }
+  .logo-side-menu.w-buy ul li:nth-child(3) {
+    border: 0; }
+  .logo-side-menu.w-buy ul li a.buy {
+    background: #ca4d4a;
+    font-size: 22px;
+    color: white;
+    text-transform: uppercase;
+    font-weight: normal;
+    padding: 3px 5px;
+    text-decoration: none; }
+    .logo-side-menu.w-buy ul li a.buy span.glyphicon-shopping-cart {
+      color: #ca4d4a;
+      background: #4b1534;
+      padding: 5px;
+      position: relative;
+      top: 4px; }
+  .logo-side-menu ul {
+    list-style-type: none;
+    margin: 70px 0 0 0;
+    padding: 0;
+    text-align: right; }
+    .logo-side-menu ul li {
+      display: inline-block;
+      border-right: 1px solid #a97875; }
+      .logo-side-menu ul li:last-child {
+        border: 0; }
+      .logo-side-menu ul li a {
+        padding: 15px;
+        font-family: 'Cuprum', sans-serif;
+        font-size: 19px;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: bold;
+        color: #4b1534; }
+        .logo-side-menu ul li a:hover {
+          text-decoration: underline; }
+
+.location-breadcrumbs {
+  border-top: 46px solid #d0c8b5;
+  border-bottom: 1px solid #4b1534; }
+  .location-breadcrumbs h3 {
+    margin: 0;
+    font-family: 'Cuprum', sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+    text-transform: uppercase;
+    color: white;
+    margin-top: -40px;
+    margin-bottom: 10px;
+    padding-left: 15px; }
+  .location-breadcrumbs ol.breadcrumb {
+    border: 0;
+    border-radius: 0;
+    margin: 0;
+    background: transparent; }
+    .location-breadcrumbs ol.breadcrumb li,
+    .location-breadcrumbs ol.breadcrumb li a {
+      font-family: 'Cuprum', sans-serif;
+      color: #93806d;
+      font-size: 20px;
+      text-decoration: none;
+      font-weight: bold; }
+    .location-breadcrumbs ol.breadcrumb a:hover {
+      text-decoration: underline; }
+    .location-breadcrumbs ol.breadcrumb li + li:before {
+      color: #93806d; }
+    .location-breadcrumbs ol.breadcrumb li.active {
+      color: #4b1534; }
+
+.content-padding {
+  padding-top: 65px;
+  padding-bottom: 65px; }
+
+.login-register-blocks h1 {
+  font-weight: bold;
+  font-family: 'Cuprum', sans-serif;
+  font-size: 25px;
+  margin: 0 0 30px 0;
+  color: #4b1534; }
+.login-register-blocks .blocks {
+  background: transparent url(../imgs/login-register-bg.png) no-repeat center center; }
+  .login-register-blocks .blocks .block {
+    min-height: 330px;
+    background: #d0c8b5;
+    padding-left: 0;
+    padding-right: 0; }
+    .login-register-blocks .blocks .block h2 {
+      height: 50px;
+      overflow: hidden;
+      line-height: 55px;
+      margin: 0;
+      padding: 0 30px 0 60px;
+      background: #4b1534 url(../imgs/login-title-icon.png) no-repeat 30px center;
+      font-family: 'Cuprum', sans-serif;
+      text-transform: uppercase;
+      color: white;
+      font-size: 25px; }
+    .login-register-blocks .blocks .block .form {
+      padding: 30px 30px 20px 30px; }
+      .login-register-blocks .blocks .block .form label {
+        display: block;
+        font-family: 'Cuprum', sans-serif;
+        color: #4b1534;
+        font-size: 16px;
+        text-transform: uppercase;
+        font-weight: normal;
+        margin-bottom: 5px;
+        line-height: 1; }
+      .login-register-blocks .blocks .block .form input[type="text"], .login-register-blocks .blocks .block .form input[type="password"] {
+        height: 45px;
+        width: 100%;
+        display: block;
+        background: white;
+        border: 1px solid #ab9b84;
+        margin-bottom: 15px;
+        padding-left: 15px;
+        padding-right: 15px; }
+      .login-register-blocks .blocks .block .form a.forgot {
+        font-family: 'Cuprum', sans-serif;
+        font-style: italic;
+        font-weight: normal;
+        font-size: 14px;
+        color: #a97875;
+        position: relative;
+        top: -15px; }
+      .login-register-blocks .blocks .block .form hr {
+        border: 1px solid #ab9b84;
+        margin: 0 0 10px 0; }
+      .login-register-blocks .blocks .block .form .submit {
+        text-align: right; }
+        .login-register-blocks .blocks .block .form .submit span.remember {
+          display: inline-block;
+          padding-right: 30px;
+          font-family: 'Cuprum', sans-serif;
+          font-size: 17px;
+          color: #4b1534;
+          font-weight: bold; }
+        .login-register-blocks .blocks .block .form .submit input[type="submit"] {
+          display: inline-block;
+          width: 124px;
+          height: 36px;
+          border: 0;
+          background: #a97875;
+          text-transform: uppercase;
+          color: white;
+          font-family: 'Cuprum', sans-serif;
+          font-weight: normal;
+          font-size: 22px; }
+
+.pre-footer {
+  background: #2b0017;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  text-align: center; }
+  .pre-footer.footer-2 ul {
+    float: left;
+    border-right: 1px solid #6C5C5D;
+    width: 33.333%; }
+    .pre-footer.footer-2 ul li {
+      border: 0;
+      display: block;
+      text-align: left;
+      line-height: 1;
+      padding-top: 5px;
+      padding-bottom: 5px; }
+  .pre-footer ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0; }
+    .pre-footer ul li {
+      padding: 0 30px;
+      border-right: 1px solid #6C5C5D;
+      display: inline-block;
+      line-height: 1; }
+      .pre-footer ul li:last-child {
+        border: 0; }
+      .pre-footer ul li a {
+        font-family: 'Cuprum', sans-serif;
+        font-size: 19px;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: #6C5C5D; }
+        .pre-footer ul li a:hover {
+          text-decoration: underline; }
+
+.footer {
+  font-family: 'Cuprum', sans-serif;
+  font-size: 19px;
+  text-decoration: none;
+  color: white;
+  text-align: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background: #4b1534; }
+  .footer a {
+    color: #a97875;
+    text-decoration: underline;
+    padding: 0 5px; }
+
+.menus-list .menu {
+  min-width: 380px;
+  width: 33.333%;
+  height: 660px;
+  padding: 190px 40px 15px 40px;
+  float: left;
+  background-position: top center;
+  background-repeat: no-repeat;
+  text-align: center; }
+  .menus-list .menu.turist {
+    background-image: url(../imgs/menus/turist-bg.png); }
+  .menus-list .menu.premium {
+    background-image: url(../imgs/menus/premium-bg.png); }
+  .menus-list .menu.kids {
+    background-image: url(../imgs/menus/kids-bg.png); }
+  .menus-list .menu h3 {
+    font-size: 26px;
+    color: #4b1534;
+    font-weight: bold;
+    font-family: 'Cuprum', sans-serif;
+    margin: 15px 0 5px 0;
+    text-transform: uppercase; }
+  .menus-list .menu p {
+    font-family: 'Cuprum', sans-serif;
+    font-weight: normal;
+    color: #727176;
+    font-size: 16px;
+    margin-bottom: 15px; }
+  .menus-list .menu hr {
+    margin: 0;
+    border: 1px dashed #ca4d4a; }
+  .menus-list .menu span.no-drink {
+    padding: 0 15px;
+    background: #d0c8b5;
+    color: #ca4d4a;
+    text-transform: uppercase;
+    font-family: 'Cuprum', sans-serif;
+    font-size: 22px;
+    display: inline-block;
+    margin-top: 20px;
+    font-weight: bold; }
+  .menus-list .menu span.ribbon {
+    height: 45px;
+    display: inline-block;
+    width: 100%;
+    margin-top: 20px;
+    font-family: 'Cuprum', sans-serif;
+    font-size: 26px;
+    font-weight: bold;
+    color: white;
+    line-height: 40px; }
+    .menus-list .menu span.ribbon.turist-ribbon {
+      background: transparent url(../imgs/menus/turist-ribbon.png) no-repeat top left;
+      background-size: 100% auto; }
+    .menus-list .menu span.ribbon.premium-ribbon {
+      background: transparent url(../imgs/menus/premium-ribbon.png) no-repeat top left;
+      background-size: 100% auto;
+      margin-top: -17px;
+    }
+    .menus-list .menu span.ribbon.kids-ribbon {
+      background: transparent url(../imgs/menus/kids-ribbon.png) no-repeat top left;
+      background-size: 100% auto;
+      /*margin-top: 64px;*/ 
+    }
+    .menus-list .menu span.ribbon span.small {
+      font-size: 18px; }
+    .menus-list .menu span.ribbon span.salmon {
+      color: #ca4d4a; }
+    .menus-list .menu span.ribbon span.wine {
+      color: #4b1534; }
+  .menus-list .menu hr.end {
+    border: 0;
+    border-top: 1px solid #727176;
+    margin-top: 20px;
+    margin-bottom: 15px; }
+  .menus-list .menu span.amount {
+    font-family: 'Cuprum', sans-serif;
+    font-size: 22px;
+    color: #727176;
+    font-weight: normal;
+    line-height: 30px;
+    margin-right: 10px;
+    vertical-align: middle; }
+    .menus-list .menu span.amount input[type="text"] {
+      max-width: 58px;
+      height: 30px;
+      border: 1px solid #ab9b84; }
+  .menus-list .menu .button {
+    background: #ca4d4a;
+    border: 0;
+    font-family: 'Cuprum', sans-serif;
+    text-transform: uppercase;
+    color: white;
+    font-size: 22px;
+    padding: 3px 5px;
+    line-height: 22px;
+    vertical-align: middle; }
+    .menus-list .menu .button span.glyphicon-shopping-cart {
+      color: #4b1534; }
+.menus-list .continue-button {
+  text-align: right; }
+  .menus-list .continue-button .button {
+    margin-top: 15px;
+    margin-right: 18px;
+    height: 40px;
+    /*widows: 195px;*/
+    padding-top: 5px;
+padding-bottom: 2px;
+padding-left: 5px;
+    background: #ca4d4a;
+    font-family: 'Cuprum', sans-serif;
+    font-size: 28px;
+    text-transform: uppercase;
+    color: white;
+    border: 0;
+    font-weight: normal; }
+    .menus-list .continue-button .button span.glyphicon-chevron-right {
+      background: #4b1534;
+      color: #ca4d4a;
+      line-height: 40px;
+      position: relative;
+      top: -1px;
+      left: 7px;
+      padding: 0 12px 0 9px;
+      font-size: 20px; }
+
+.order-table table {
+  width: 100%;
+  border-spacing: 10px;
+  border-collapse: separate; }
+.order-table tr > th,
+.order-table tr > td {
+  text-align: center; }
+.order-table tr > th:first-child,
+.order-table tr > td:first-child,
+.order-table tr > th:nth-child(3),
+.order-table tr > td:nth-child(3),
+.order-table tr > th:nth-child(4),
+.order-table tr > td:nth-child(4) {
+  width: 20%; }
+.order-table tr > th:last-child,
+.order-table tr > td:last-child {
+  width: 10%; }
+.order-table tr > th:nth-child(2),
+.order-table tr > td:nth-child(2) {
+  width: 30%; }
+.order-table tr > th:first-child {
+  background: #d0c8b5;
+  color: #4b1534;
+  font-weight: bold;
+  font-size: 22px;
+  font-family: 'Cuprum', sans-serif;
+  padding-top: 5px;
+  padding-bottom: 5px; }
+.order-table tr.subheader > td {
+  background: #ca4d4a;
+  color: white;
+  font-weight: bold;
+  font-size: 22px;
+  font-family: 'Cuprum', sans-serif;
+  padding-top: 5px;
+  padding-bottom: 5px; }
+  .order-table tr.subheader > td:last-child {
+    background: transparent; }
+.order-table tr.w-border td {
+  border: 1px solid #ab9b84;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 22px;
+  color: #727176;
+  text-transform: uppercase;
+  line-height: 1; }
+  .order-table tr.w-border td input[type="text"] {
+    max-width: 65px;
+    height: 42px;
+    border: 1px solid #ab9b84;
+    text-align: center; }
+  .order-table tr.w-border td a.refresh {
+    color: #ca4d4a;
+    text-decoration: none;
+    border-bottom: 1px solid #ab9b84; }
+  .order-table tr.w-border td a.delete {
+    color: #4b1534;
+    text-decoration: none;
+    border-bottom: 1px solid #ab9b84; }
+
+.order-table-result {
+  text-align: right; }
+  .order-table-result a.refresh-result {
+    color: #ca4d4a;
+    text-decoration: none;
+    border-bottom: 1px solid #ab9b84;
+    display: inline-block;
+    font-size: 22px;
+    margin-right: 15px; }
+  .order-table-result span.result {
+    display: inline-block;
+    padding: 10px 25px;
+    margin-top: 10px;
+    background: #ca4d4a;
+    font-family: 'Cuprum', sans-serif;
+    font-size: 22px;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+    line-height: 1; }
+    .order-table-result span.result span:first-child {
+      display: inline-block;
+      margin-right: 15px;
+      padding-right: 15px;
+      border-right: 1px solid white; }
+
+.date hr.separator {
+  border: 0;
+  border-top: 1px solid #ab9b84; }
+.date table {
+  width: 100%;
+  border-spacing: 10px;
+  border-collapse: separate; }
+.date tr > th,
+.date tr > td {
+  text-align: center; }
+.date tr > th:first-child {
+  background: #d0c8b5;
+  color: #4b1534;
+  font-family: 'Cuprum', sans-serif;
+  font-weight: bold;
+  font-size: 22px;
+  width: 20% !important;
+  padding-top: 5px;
+  padding-bottom: 5px; }
+.date tr > th:nth-child(2),
+.date tr > th:last-child {
+  font-family: 'Cuprum', sans-serif;
+  font-size: 20px;
+  color: #727176;
+  font-weight: bold; }
+  .date tr > th:nth-child(2) input[type="text"],
+  .date tr > th:last-child input[type="text"] {
+    width: 100%;
+    max-width: 150px;
+    height: 32px;
+    border: 1px solid #ab9b84;
+    margin-left: 15px;
+    margin-right: 15px; }
+  .date tr > th:nth-child(2) a.calendar,
+  .date tr > th:last-child a.calendar {
+    color: #ca4d4a;
+    text-decoration: none;
+    font-size: 24px;
+    position: relative;
+    top: 4px; }
+.date tr > td:last-child {
+  font-family: 'Cuprum', sans-serif;
+  color: #4b1534;
+  font-size: 18px;
+  text-align: left;
+  font-weight: bold;
+  padding-left: 5%;
+  padding-right: 5%; }
+  .date tr > td:last-child span {
+    border-top: 1px solid #ca4d4a;
+    display: block;
+    padding-top: 5px; }
+
+.passenger hr.separator {
+  border: 0;
+  border-top: 1px solid #ab9b84; }
+.passenger table {
+  width: 100%;
+  border-spacing: 10px;
+  border-collapse: separate; }
+.passenger tr > th {
+  text-align: center; }
+.passenger tr > th:first-child {
+  background: #d0c8b5;
+  color: #4b1534;
+  font-family: 'Cuprum', sans-serif;
+  font-weight: bold;
+  font-size: 22px;
+  width: 20% !important;
+  padding-top: 5px;
+  padding-bottom: 5px; }
+
+.passenger tr > th:nth-child(2) {
+  color: #727176;
+  font-family: 'Cuprum', sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  min-width:200px;
+  padding-top: 5px;
+  padding-bottom: 5px; }
+
+.passenger tr > th:last-child {
+  width: 80%;
+  font-family: 'Cuprum', sans-serif;
+  color: #ab9b84;
+  font-size: 22px;
+  font-weight: normal; }
+  .passenger tr > th:last-child input[type="text"] {
+    max-width: 500px;
+    width: 100%;
+    height: 32px;
+    border: 1px solid #ab9b84; }
+.passenger .button {
+  background: #4b1534;
+  color: white;
+  font-size: 26px;
+  padding: 5px 25px;
+  float: right;
+  font-family: 'Cuprum', sans-serif;
+  border: 0;
+  text-transform: uppercase;
+  line-height: 1; }
+  .passenger .button span.glyphicon-shopping-cart {
+    padding-left: 0;
+    padding-right: 10px;
+    position: relative;
+    top: 2px; }
+
+.success-buy {
+  text-align: center; }
+  .success-buy h3 {
+    margin: 0 0 25px 0;
+    font-family: 'Cuprum', sans-serif;
+    font-weight: bold;
+    color: #4b1534;
+    font-size: 34px;
+    text-align: center; }
+    .success-buy h3 span.salmon {
+      text-transform: uppercase;
+      color: #ca4d4a; }
+    .success-buy h3 span.wine {
+      color: #4b1534; }
+  .success-buy p {
+    font-family: 'Cuprum', sans-serif;
+    font-weight: normal;
+    font-size: 20px;
+    color: #ab9b84;
+    text-align: center; }
+  .success-buy hr.separator {
+    border: 0;
+    border-top: 1px solid #ab9b84;
+    margin: 45px 0; }
+  .success-buy a {
+    text-decoration: none; }
+    .success-buy a span.link-label {
+      line-height: 1;
+      padding: 3px 15px;
+      background: #ca4d4a;
+      font-weight: normal;
+      font-size: 28px;
+      text-transform: uppercase;
+      color: white;
+      font-family: 'Cuprum', sans-serif; }
+    .success-buy a span.glyphicon-print,
+    .success-buy a span.glyphicon-envelope {
+      font-size: 32px;
+      color: #4b1534;
+      line-height: 1;
+      position: relative;
+      top: 7px;
+      left: 5px; }
+  .success-buy img.logo-fade {
+    max-width: 100%;
+    margin: 60px 0; }
+
+.register-form {
+  border-right: 1px solid #727176; }
+  .register-form h3 {
+    margin: 0 0 25px 0;
+    font-family: 'Cuprum', sans-serif;
+    font-weight: bold;
+    color: #4b1534;
+    font-size: 26px;
+    text-align: left;
+    position: relative;
+padding-left: 50px;	}
+    .register-form h3:before, .register-form h3::before {
+      content: '';
+      width: 10px;
+      height: 10px;
+      border-radius: 5px;
+      border-radius: 50%;
+      background: #ca4d4a;
+      position: absolute;
+      top: 50%;
+      margin-top: -5px;
+      left: 30px; }
+  .register-form span.form-title {
+    display: inline-block;
+    padding: 0 15px;
+    float: right;
+    width: 75%;
+    line-height: 42px;
+    height: 42px;
+    background: #d0c8b5;
+    color: #4b1534;
+    font-family: 'Cuprum', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 15px; }
+  .register-form label {
+    width: 25%;
+    float: left;
+    font-family: 'Cuprum', sans-serif;
+    font-weight: normal;
+    font-size: 18px;
+    color: #727176;
+    text-transform: uppercase;
+    line-height: 50px;
+    margin: 0 0 15px 0;
+    text-align: right;
+    padding: 0 15px; }
+    .register-form label.double-line {
+      line-height: 25px; }
+  .register-form input[type="text"], .register-form input[type="password"], .register-form textarea  {
+    width: 75%;
+    float: right;
+    border: 1px solid #ab9b84;
+    height: 50px;
+    padding-left: 15px;
+    margin: 0 0 15px 0; }
+  .register-form span.tos {
+    font-family: 'Cuprum', sans-serif;
+    font-weight: normal;
+    font-size: 18px;
+    color: #727176;
+    display: inline-block;
+    max-width: 75%;
+    float: right;
+    line-height: 1.1; }
+    .register-form span.tos a {
+      color: #4b1534; }
+
+.register-banner img {
+  width: 100%; }
+
+.submit-registration {
+  text-align: right;
+  margin-top: 25px; }
+  .submit-registration a {
+    font-family: 'Cuprum', sans-serif;
+    font-weight: normal;
+    font-size: 18px;
+    color: #4b1534;
+    display: inline-block; }
+  .submit-registration button, .submit-registration .registro {
+    width: 100%;
+    max-width: 220px;
+    height: 50px;
+    display: inline-block;
+    border: 0;
+    background: #a97875;
+    color: white;
+    font-family: 'Cuprum', sans-serif;
+    font-size: 30px;
+    font-weight: normal;
+    text-transform: uppercase;
+    line-height: 1;
+    padding: 10px 25px;
+    margin-left: 15px; }
+
+.main-slider {
+  padding: 0;
+  margin-top: -10px;
+  border-top: 30px solid #d0c8b5;
+  border-bottom: 10px solid #a97875; }
+  .main-slider .item {
+    height: 335px;
+    background-size: 100% auto;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat; }
+  .main-slider .carousel-control .glyphicon-chevron-left,
+  .main-slider .carousel-control .glyphicon-chevron-right,
+  .main-slider .carousel-control .icon-prev,
+  .main-slider .carousel-control .icon-next {
+    background: #4b1534;
+    color: #ca4d4a;
+    text-shadow: none;
+    opacity: 1;
+    border-radius: 15px;
+    font-size: 18px;
+    line-height: 30px; }
+  .main-slider .carousel-indicators {
+    left: 50%;
+    width: 80%;
+    margin-left: -40%;
+    text-align: right; }
+    .main-slider .carousel-indicators li {
+      border-color: #4b1534;
+      background: #4b1534;
+      box-shadow: none; }
+      .main-slider .carousel-indicators li.active {
+        background: #ca4d4a; }
+
+.cupons .cupon {
+  width: 33.333%;
+  float: left;
+  min-width: 322px;
+  height: 313px;
+  margin-bottom: 15px;
+  background: transparent url(../imgs/cupon-bg.png) no-repeat center top;
+  text-align: center; }
+  .cupons .cupon a {
+    text-decoration: none;
+    display: block; }
+  .cupons .cupon h3 {
+    font-family: 'IntroRegular';
+    font-weight: normal !important;
+    text-shadow: 0 0 3px black;
+    color: white;
+    text-transform: uppercase;
+    margin-top: 29px;
+    margin-bottom: 9px; }
+  .cupons .cupon img {
+    height: 75px; }
+  .cupons .cupon p {
+    margin-top: 45px;
+    font-family: 'Cuprum', sans-serif;
+    font-weight: normal;
+    font-size: 18px;
+    color: #727176;
+    text-transform: uppercase; }
+    .cupons .cupon p.small {
+      font-size: 14px;
+      color: #a97875;
+      margin-top: 32px; }
+    .cupons .cupon p span.salmon {
+      color: #ca4d4a; }
+  .cupons .cupon span.link {
+    font-size: 12px;
+    font-family: 'Cuprum', sans-serif;
+    font-weight: normal;
+    color: #ca4d4a;
+    text-transform: uppercase;
+    position: relative;
+    top: -5px;
+    left: 80px; }
+
+.place-info {
+  text-align: center;
+  border-right: 1px solid #4b1534; }
+  .place-info img.place-logo {
+    width: 100%;
+    max-width: 319px;
+    border: 1px solid #ab9b84;
+    margin-bottom: 25px; 
+
+
+  }
+
+  .place-info img.mapa-logo {
+    width: 100%;
+    max-width: 319px;
+    border: 1px solid #ab9b84;
+    margin-bottom: 25px; 
+    margin-top: 25px; 
+
+  }
+
+  .place-info .more-info {
+    background: transparent url(../imgs/place-info-bg.png) no-repeat center top;
+    height: 370px;
+    text-align: center;
+    padding: 68px 15px 0 15px; }
+    .place-info .more-info h3 {
+      font-family: 'Cuprum', sans-serif;
+      font-weight: bold;
+      font-size: 18px;
+      text-transform: uppercase;
+      color: #4b1534; }
+    .place-info .more-info p {
+      font-family: 'Cuprum', sans-serif;
+      font-weight: normal;
+      font-size: 18px;
+      text-transform: uppercase;
+      color: #727176; }
+      .place-info .more-info p.time {
+        margin-top: 59px;
+        margin-bottom: 0;
+        color: white;
+        text-transform: inherit;
+        font-size: 21px; }
+
+.place-menus .menu {
+  float: left;
+  width: 50%;
+  min-width: 407px;
+  height: 748px;
+  background-repeat: no-repeat;
+  background-position: center top; }
+  .place-menus .menu.kids {
+    background-image: url(../imgs/place-info-kids-bg.png); }
+  .place-menus .menu.turist {
+    background-image: url(../imgs/place-info-turist-bg.png); }
+  .place-menus .menu.premium {
+    background-image: url(../imgs/place-info-premium-bg.png); }
+  .place-menus .menu .first,
+  .place-menus .menu .main,
+  .place-menus .menu .desert,
+  .place-menus .menu .drinks {
+    height: 185px;
+    margin-top: 160px;
+    text-align: center;
+    padding: 0 45px; }
+    .place-menus .menu .first h3,
+    .place-menus .menu .main h3,
+    .place-menus .menu .desert h3,
+    .place-menus .menu .drinks h3 {
+      font-family: 'Cuprum', sans-serif;
+      font-weight: bold;
+      font-size: 20px;
+      text-transform: uppercase;
+      color: #4b1534;
+      margin-bottom: 15px; }
+    .place-menus .menu .first p,
+    .place-menus .menu .main p,
+    .place-menus .menu .desert p,
+    .place-menus .menu .drinks p {
+      font-family: 'Cuprum', sans-serif;
+      font-weight: normal;
+      font-size: 18px;
+      color: #727176;
+      line-height: 1;
+      margin: 0 0 10px 0; }
+  .place-menus .menu .main {
+    height: 165px;
+    padding-top: 28px;
+    text-align: center;
+    padding: 0 45px;
+    margin-top: 0; }
+  .place-menus .menu .desert {
+    height: 80px;
+    padding-top: 28px;
+    text-align: center;
+    padding: 0 45px;
+    margin-top: 0; }
+  .place-menus .menu .drinks {
+    height: 75px;
+    padding-top: 28px;
+    text-align: center;
+    padding: 0 45px;
+    margin-top: 0; }
+    .place-menus .menu .drinks span.no-drink {
+      padding: 3px 15px;
+      background: #d0c8b5;
+      color: #ca4d4a;
+      text-transform: uppercase;
+      font-weight: normal;
+      font-size: 18px;
+      font-family: 'Cuprum', sans-serif;
+      position: relative;
+      top: 20px; }
+.place-menus .kids-menu-wrapper {
+  margin-top: 25px; }
+.place-menus .kids-menu-details {
+  border: 2px solid #ab9b84;
+  max-width: 828px;
+  float: none;
+  margin: 0 auto;
+  padding: 15px; }
+  .place-menus .kids-menu-details .info {
+    background: transparent url(../imgs/kids-menu-details.png) no-repeat center center;
+    background-size: 100% auto;
+    background-size: cover;
+    min-height: 229px;
+    text-align: center; }
+    .place-menus .kids-menu-details .info h2 {
+      padding-bottom: 15px;
+      background: transparent url(../imgs/menu-kids-title-bg.png) no-repeat center bottom;
+      font-family: 'Cuprum', sans-serif;
+      color: #4b1534;
+      font-weight: bold;
+      font-size: 28px;
+      text-transform: uppercase;
+      margin: 0 0 7px 0;
+      padding-top: 7px; }
+      .place-menus .kids-menu-details .info h2 span.small {
+        text-transform: initial;
+        font-weight: bold;
+        font-size: 18px;
+        color: #4b1534; }
+    .place-menus .kids-menu-details .info h3 {
+      font-family: 'Cuprum', sans-serif;
+      color: #4b1534;
+      font-weight: bold;
+      font-size: 20px;
+      text-transform: uppercase;
+      margin: 0 0 7px 0; }
+      .place-menus .kids-menu-details .info h3.bottom-separator {
+        padding-bottom: 7px;
+        background: transparent url(../imgs/p-bottom-bg.png) no-repeat center bottom; }
+    .place-menus .kids-menu-details .info p {
+      font-family: 'Cuprum', sans-serif;
+      color: white;
+      font-weight: regular;
+      font-size: 18px;
+      padding: 0;
+      margin: 0 0 2px 0;
+      line-height: 1; }
+      .place-menus .kids-menu-details .info p.bottom-separator {
+        padding-bottom: 10px;
+        background: transparent url(../imgs/p-bottom-bg.png) no-repeat center bottom;
+        margin-bottom: 5px; }
+    .place-menus .kids-menu-details .info span.no-drink-tag {
+      background: #ca4d4a;
+      display: inline-block;
+      padding: 3px 15px;
+      color: white;
+      font-family: 'Cuprum', sans-serif;
+      font-size: 16px;
+      font-weight: normal;
+      text-transform: uppercase;
+      line-height: 1; }
+
+.place-pictures {
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 15px;
+  margin-top: 15px;
+  border-top: 1px solid #4b1534; }
+  .place-pictures .wrapper {
+    background: #d0c8b5;
+    padding: 15px;
+    text-align: center; }
+    .place-pictures .wrapper a.thumb {
+      display: inline-block;
+      width: 30%;
+      background: white;
+      padding: 10px 10px 25px 10px;
+      position: relative;
+      margin-left: 1px;
+      margin-right: 1px; }
+      .place-pictures .wrapper a.thumb span.image {
+        display: inline-block;
+        width: 100%;
+        height: 170px;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: 100% auto;
+        background-size: cover; }
+      .place-pictures .wrapper a.thumb span.glyphicon-zoom-in {
+        position: absolute;
+        top: auto;
+        left: auto;
+        right: 10px;
+        bottom: 8px;
+        color: #4b1534; }
+
+.voucher-container {
+  float: none;
+  width: 750px;
+  overflow: hidden;
+  margin: 0 auto; }
+  .voucher-container .voucher-cupon {
+    border-bottom: 2px dashed black;
+    padding: 10px;
+    float: left;
+    width: 50%; }
+    .voucher-container .voucher-cupon:nth-child(2n+1) {
+      border-right: 2px dashed black; }
+    .voucher-container .voucher-cupon .heading {
+      padding-left: 90px;
+      position: relative; }
+      .voucher-container .voucher-cupon .heading img.logo {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 0; }
+      .voucher-container .voucher-cupon .heading h3 {
+        font-family: Arial, Helvetica, sans-serif;
+        color: black;
+        font-size: 14px;
+        font-weight: bold;
+        margin: 0 0 6px 0; }
+      .voucher-container .voucher-cupon .heading span.small {
+        display: block;
+        font-family: Arial, Helvetica, sans-serif;
+        color: black;
+        font-size: 11px;
+        font-weight: normal;
+        margin: 0; }
+    .voucher-container .voucher-cupon .divider {
+      text-align: center; }
+      .voucher-container .voucher-cupon .divider.smaller {
+        max-height: 10px; }
+      .voucher-container .voucher-cupon .divider img {
+        max-width: 100%; }
+        .voucher-container .voucher-cupon .divider img.second-separator {
+          position: relative;
+          top: -7.5px; }
+    .voucher-container .voucher-cupon .info {
+      text-align: center; }
+      .voucher-container .voucher-cupon .info h2 {
+        font-family: Arial, Helvetica, sans-serif;
+        color: black;
+        font-size: 16px;
+        font-weight: bold;
+        margin: 5px 0 0 0;
+        text-transform: uppercase; }
+      .voucher-container .voucher-cupon .info h3 {
+        font-family: Arial, Helvetica, sans-serif;
+        color: black;
+        font-size: 14px;
+        font-weight: bold;
+        margin: 0 0 3px 0;
+        text-transform: uppercase; }
+      .voucher-container .voucher-cupon .info p {
+        display: block;
+        font-family: Arial, Helvetica, sans-serif;
+        color: black;
+        font-size: 10px;
+        font-weight: normal;
+        margin: 0; }
+        .voucher-container .voucher-cupon .info p.cuprum {
+          font-weight: bold;
+          font-family: 'Cuprum', sans-serif;
+          font-size: 14px;
+          line-height: 1; }
+          .voucher-container .voucher-cupon .info p.cuprum.tag {
+            background: black;
+            color: white;
+            font-size: 18px;
+            padding: 2px 0;
+            line-height: 1; }
+
+.bootstrap-datetimepicker-widget {
+  margin-left: 50px; }
+
+/* End site's custom styles */
+/* Import responsive media queries */
+@media screen and (max-width: 1200px) {
+  body {
+    overflow-x: hidden; } }
+@media screen and (max-width: 1024px) {
+  .menus-list .menu {
+    clear: both;
+    margin: 0 auto 25px auto; }
+
+  .cupons .cupon {
+    width: 50%; }
+
+  .place-menus .menu {
+    clear: both;
+    margin: 0 auto 25px auto; }
+
+  .place-info .more-info h3 {
+    font-size: 14px; }
+
+  .place-info .more-info p {
+    font-size: 14px;
+    margin-bottom: 20px; } }
+@media screen and (max-width: 990px) {
+  .logo {
+    text-align: center; }
+
+  .logo-side-menu ul {
+    margin-top: 0;
+    text-align: center; } }
+@media screen and (max-width: 768px) {
+  .register-form input[type="text"], .register-form input[type="password"], .register-form textarea  {
+    width: 74%;
+    float: left; }
+
+  .register-banner {
+    margin-top: 25px; }
+
+  .login-register-blocks .blocks {
+    background: transparent; }
+
+  .login-register-blocks .blocks .block {
+    width: 98%;
+    max-width: 500px;
+    margin: 0 auto;
+    float: none !important;
+    margin-bottom: 25px; }
+
+  .place-menus .menu {
+    float: none !important;
+    position: relative;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+    margin-top: 25px;
+    margin: 25px 0 0 0; }
+
+  .place-menus .menu .first {
+    margin-top: 0;
+    height: 345px;
+    text-align: center;
+    padding: 0 45px;
+    padding-top: 165px; } }
+@media screen and (max-width: 680px) {
+  .cupons .cupon {
+    width: 100%; }
+
+  .login-register-blocks .blocks {
+    padding-left: 15px;
+    padding-right: 15px; }
+
+  .register-form label {
+    width: 35%; }
+
+  .register-form input[type="text"], .register-form input[type="password"], .register-form textarea  {
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 65%; } }
+@media screen and (max-width: 480px) {
+  .login-register-blocks .blocks {
+    background: transparent; }
+
+  .login-register-blocks .blocks .block {
+    margin-bottom: 50px; }
+
+  .pre-footer ul li {
+    margin-top: 5px;
+    margin-bottom: 5px; }
+
+  .logo-side-menu.w-buy ul li a.buy {
+    position: relative;
+    top: 15px; }
+
+  .top-bar.logged-in span span.name {
+    display: none; }
+
+  .register-form {
+    border: 0; }
+
+  .register-banner {
+    margin-top: 25px; }
+
+  .cupons .cupon {
+    width: 100%; }
+
+  .pre-footer.footer-2 ul {
+    width: 100%; }
+
+  .location-breadcrumbs h3 {
+    font-size: 18px;
+    padding-top: 8px; }
+
+  .place-info {
+    margin-bottom: 25px;
+    border: 0; }
+
+  .place-menus .menu {
+    width: 100%; }
+
+  .place-pictures .wrapper a.thumb span.image {
+    height: 70px; } }
+@media screen and (max-width: 420px) {
+  .logo-side-menu ul li a {
+    padding: 15px 10px;
+    font-size: 16px; }
+
+  .place-menus .menu {
+    margin-left: -37px; }
+
+  .menus-list .menu {
+    margin-left: -52px; } }
+@media screen and (max-width: 320px) {
+  .top-bar {
+    padding: 0; }
+
+  .location-breadcrumbs {
+    padding: 0; }
+    .location-breadcrumbs ol.breadcrumb {
+      padding-left: 0;
+      padding-right: 0; }
+
+  .logo-side-menu ul li {
+    display: block;
+    margin-bottom: 10px;
+    border: 0; }
+
+  .pre-footer ul li {
+    border: 0; }
+
+  .menus-list {
+    margin-left: -50px; }
+
+  .menus-list .continue-button {
+    position: relative;
+    left: 65px; }
+
+  .register-form span.form-title {
+    font-size: 18px; }
+
+  .register-form label {
+    width: 35%;
+    font-size: 16px; }
+
+  .register-form input[type="text"], .register-form input[type="password"], .register-form textarea  {
+    width: 65%; }
+
+  .cupons .cupon {
+    margin-left: -24px; }
+
+  .place-menus .menu {
+    margin-left: -65px;
+    padding-left: 50px;
+    padding-right: 35px; } }
+
+/*# sourceMappingURL=main.css.map */

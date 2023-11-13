@@ -1,0 +1,45 @@
+Fecha: 9/12/2019 14:08:56 
+Error: No se puede reconocer la cadena como valor DateTime válido.
+Detalle: System.FormatException: No se puede reconocer la cadena como valor DateTime válido.
+   en System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   en System.DateTime.Parse(String s)
+   en carrito.CrearPedido(Int32 id, String pasajero, String dni, String estadiaDesde, String estadiaHasta, String pagoPor) en c:\Users\Kevin\Documents\_LOCAL\grupobuziosresto\ACHE.Web\carrito.aspx.cs:línea 141
+^^-------------------------------------------------------------------^^
+Fecha: 9/12/2019 14:09:47 
+Error: No se puede reconocer la cadena como valor DateTime válido.
+Detalle: System.FormatException: No se puede reconocer la cadena como valor DateTime válido.
+   en System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   en System.DateTime.Parse(String s)
+   en carrito.CrearPedido(Int32 id, String pasajero, String dni, String estadiaDesde, String estadiaHasta, String pagoPor) en c:\Users\Kevin\Documents\_LOCAL\grupobuziosresto\ACHE.Web\carrito.aspx.cs:línea 141
+^^-------------------------------------------------------------------^^
+Fecha: 9/12/2019 14:14:11 
+Error: La cadena representa un DateTime no admitido en el calendario System.Globalization.GregorianCalendar.
+Detalle: System.FormatException: La cadena representa un DateTime no admitido en el calendario System.Globalization.GregorianCalendar.
+   en System.DateTimeParse.ParseExact(String s, String format, DateTimeFormatInfo dtfi, DateTimeStyles style)
+   en System.DateTime.ParseExact(String s, String format, IFormatProvider provider)
+   en carrito.CrearPedido(Int32 id, String pasajero, String dni, String estadiaDesde, String estadiaHasta, String pagoPor) en c:\Users\Kevin\Documents\_LOCAL\grupobuziosresto\ACHE.Web\carrito.aspx.cs:línea 144
+^^-------------------------------------------------------------------^^
+Fecha: 9/12/2019 14:14:29 
+Error: La cadena representa un DateTime no admitido en el calendario System.Globalization.GregorianCalendar.
+Detalle: System.FormatException: La cadena representa un DateTime no admitido en el calendario System.Globalization.GregorianCalendar.
+   en System.DateTimeParse.ParseExact(String s, String format, DateTimeFormatInfo dtfi, DateTimeStyles style)
+   en System.DateTime.ParseExact(String s, String format, IFormatProvider provider)
+   en carrito.CrearPedido(Int32 id, String pasajero, String dni, String estadiaDesde, String estadiaHasta, String pagoPor) en c:\Users\Kevin\Documents\_LOCAL\grupobuziosresto\ACHE.Web\carrito.aspx.cs:línea 144
+^^-------------------------------------------------------------------^^
+Fecha: 9/12/2019 14:14:54 
+Error: La cadena representa un DateTime no admitido en el calendario System.Globalization.GregorianCalendar.
+Detalle: System.FormatException: La cadena representa un DateTime no admitido en el calendario System.Globalization.GregorianCalendar.
+   en System.DateTimeParse.ParseExact(String s, String format, DateTimeFormatInfo dtfi, DateTimeStyles style)
+   en System.DateTime.ParseExact(String s, String format, IFormatProvider provider)
+   en carrito.CrearPedido(Int32 id, String pasajero, String dni, String estadiaDesde, String estadiaHasta, String pagoPor) en c:\Users\Kevin\Documents\_LOCAL\grupobuziosresto\ACHE.Web\carrito.aspx.cs:línea 144
+^^-------------------------------------------------------------------^^
+Fecha: 9/12/2019 14:20:05 
+Error: Debe agregar por lo menos 1 producto al carrito para poder realizar el pedido.
+Detalle: System.Exception: Debe agregar por lo menos 1 producto al carrito para poder realizar el pedido.
+   en carrito.CrearPedido(Int32 id, String pasajero, String dni, String estadiaDesde, String estadiaHasta, String pagoPor) en c:\Users\Kevin\Documents\_LOCAL\grupobuziosresto\ACHE.Web\carrito.aspx.cs:línea 160
+^^-------------------------------------------------------------------^^
+Fecha: 9/12/2019 14:20:08 
+Error: Debe agregar por lo menos 1 producto al carrito para poder realizar el pedido.
+Detalle: System.Exception: Debe agregar por lo menos 1 producto al carrito para poder realizar el pedido.
+   en carrito.CrearPedido(Int32 id, String pasajero, String dni, String estadiaDesde, String estadiaHasta, String pagoPor) en c:\Users\Kevin\Documents\_LOCAL\grupobuziosresto\ACHE.Web\carrito.aspx.cs:línea 160
+^^-------------------------------------------------------------------^^

@@ -1,0 +1,42 @@
+Fecha: 17/10/2019 17:20:55 
+Error: Ya existe un precio creado para esa fecha
+Detalle: System.Exception: Ya existe un precio creado para esa fecha
+   en admin_modulos_custom_preciosServiciosOperadorese.CreateEntity() en c:\Users\Kevin\Documents\_LOCAL\grupobuziosresto\ACHE.Web\admin\modulos\custom\preciosServiciosOperadorese.aspx.cs:línea 242
+   en admin_modulos_custom_preciosServiciosOperadorese.Process() en c:\Users\Kevin\Documents\_LOCAL\grupobuziosresto\ACHE.Web\admin\modulos\custom\preciosServiciosOperadorese.aspx.cs:línea 129
+^^-------------------------------------------------------------------^^
+Fecha: 17/10/2019 17:24:38 
+Error: Ya existe un precio creado para esa fecha
+Detalle: System.Exception: Ya existe un precio creado para esa fecha
+   en admin_modulos_custom_preciosServiciosOperadorese.CreateEntity() en c:\Users\Kevin\Documents\_LOCAL\grupobuziosresto\ACHE.Web\admin\modulos\custom\preciosServiciosOperadorese.aspx.cs:línea 242
+   en admin_modulos_custom_preciosServiciosOperadorese.Process() en c:\Users\Kevin\Documents\_LOCAL\grupobuziosresto\ACHE.Web\admin\modulos\custom\preciosServiciosOperadorese.aspx.cs:línea 129
+^^-------------------------------------------------------------------^^
+Fecha: 17/10/2019 17:29:47 
+Error: Ya existe un precio creado para esa fecha
+Detalle: System.Exception: Ya existe un precio creado para esa fecha
+   en admin_modulos_custom_preciosServiciosOperadorese.CreateEntity() en c:\Users\Kevin\Documents\_LOCAL\grupobuziosresto\ACHE.Web\admin\modulos\custom\preciosServiciosOperadorese.aspx.cs:línea 242
+   en admin_modulos_custom_preciosServiciosOperadorese.Process() en c:\Users\Kevin\Documents\_LOCAL\grupobuziosresto\ACHE.Web\admin\modulos\custom\preciosServiciosOperadorese.aspx.cs:línea 129
+^^-------------------------------------------------------------------^^
+Fecha: 17/10/2019 17:39:36 
+Error: Ya existe un precio creado para esa fecha
+Detalle: System.Exception: Ya existe un precio creado para esa fecha
+   en admin_modulos_custom_preciosServiciosOperadorese.CreateEntity() en c:\Users\Kevin\Documents\_LOCAL\grupobuziosresto\ACHE.Web\admin\modulos\custom\preciosServiciosOperadorese.aspx.cs:línea 242
+   en admin_modulos_custom_preciosServiciosOperadorese.Process() en c:\Users\Kevin\Documents\_LOCAL\grupobuziosresto\ACHE.Web\admin\modulos\custom\preciosServiciosOperadorese.aspx.cs:línea 129
+^^-------------------------------------------------------------------^^
+Fecha: 17/10/2019 17:40:22 
+Error: Ya existe un precio creado para esa fecha
+Detalle: System.Exception: Ya existe un precio creado para esa fecha
+   en admin_modulos_custom_preciosServiciosOperadorese.CreateEntity() en c:\Users\Kevin\Documents\_LOCAL\grupobuziosresto\ACHE.Web\admin\modulos\custom\preciosServiciosOperadorese.aspx.cs:línea 242
+   en admin_modulos_custom_preciosServiciosOperadorese.Process() en c:\Users\Kevin\Documents\_LOCAL\grupobuziosresto\ACHE.Web\admin\modulos\custom\preciosServiciosOperadorese.aspx.cs:línea 129
+^^-------------------------------------------------------------------^^
+Fecha: 17/10/2019 17:40:44 
+Error: Ya existe un precio creado para esa fecha
+Detalle: System.Exception: Ya existe un precio creado para esa fecha
+   en admin_modulos_custom_preciosServiciosOperadorese.CreateEntity() en c:\Users\Kevin\Documents\_LOCAL\grupobuziosresto\ACHE.Web\admin\modulos\custom\preciosServiciosOperadorese.aspx.cs:línea 242
+   en admin_modulos_custom_preciosServiciosOperadorese.Process() en c:\Users\Kevin\Documents\_LOCAL\grupobuziosresto\ACHE.Web\admin\modulos\custom\preciosServiciosOperadorese.aspx.cs:línea 129
+^^-------------------------------------------------------------------^^
+Fecha: 17/10/2019 17:43:27 
+Error: Ya existe un precio creado para esa fecha
+Detalle: System.Exception: Ya existe un precio creado para esa fecha
+   en admin_modulos_custom_preciosServiciosOperadorese.CreateEntity() en c:\Users\Kevin\Documents\_LOCAL\grupobuziosresto\ACHE.Web\admin\modulos\custom\preciosServiciosOperadorese.aspx.cs:línea 242
+   en admin_modulos_custom_preciosServiciosOperadorese.Process() en c:\Users\Kevin\Documents\_LOCAL\grupobuziosresto\ACHE.Web\admin\modulos\custom\preciosServiciosOperadorese.aspx.cs:línea 129
+^^-------------------------------------------------------------------^^

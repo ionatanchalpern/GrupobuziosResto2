@@ -1,0 +1,36 @@
+﻿function RadGrid1_DataBinding(sender, args) {
+    // This event will be raised twice by default! 
+    // The first call will retrieve data and the second call will retrieve total items count.
+    // If you want to cancel the event you can use:
+    // args.set_cancel(true);
+
+    // get data source location, method name and arguments
+    var dataSourceLocation = args.get_location();
+    var selectMethodName = args.get_methodName();
+    var methodArguments = args.get_methodArguments();
+
+    // set data source location and method name
+    // args.set_location("url to your data source");
+    // args.set_methodName("your method name");
+
+    // The grid will always pass by default four arguments for the SelectMethod.
+    // SelectCountMethod will be called with no arguments by default!
+
+    // get names for select parameters
+    var startRowIndexParameterName = sender.ClientSettings.DataBinding.StartRowIndexParameterName;
+    // default is "startRowIndex". 
+
+    var maximumRowsParameterName = sender.ClientSettings.DataBinding.MaximumRowsParameterName;
+    // default is "maximumRows"
+
+    var sortParameterName = sender.ClientSettings.DataBinding.SortParameterName;
+    // default is "sortExpression"
+
+    var filterParameterName = sender.ClientSettings.DataBinding.FilterParameterName;
+    // default is "filterExpression"
+
+    // construct your own arguments
+    // var myMethodArguments = new Object();
+    // myMethodArguments.myArgumentName = "myArgumentValue";
+    // args.set_methodArguments(myMethodArguments);
+}

@@ -1,0 +1,7 @@
+Fecha: 9/17/2022 8:54:50 PM 
+Error: The SMTP host was not specified.
+Detalle: System.InvalidOperationException: The SMTP host was not specified.
+   at ACHE.Model.EmailHelper.SendMailMessage(MailMessage mailMessage) in c:\Users\lania\Desktop\Proyectos\grupobuziosresto\ACHE.Web\App_Code\EmailHelper.cs:line 96
+   at ACHE.Model.EmailHelper.SendMessage(EmailTemplate template, ListDictionary replacements, String to, String subject) in c:\Users\lania\Desktop\Proyectos\grupobuziosresto\ACHE.Web\App_Code\EmailHelper.cs:line 50
+   at registro.registrarUsuario(String empresa, String contacto, String direccion, String telefono, String email, String pwd) in c:\Users\lania\Desktop\Proyectos\grupobuziosresto\ACHE.Web\registro.aspx.cs:line 49
+^^-------------------------------------------------------------------^^

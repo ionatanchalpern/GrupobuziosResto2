@@ -1,0 +1,1513 @@
+/* Import fonts, colors, and complex CSS styles */
+@import 'partials/fonts';
+@import 'partials/colors';
+@import 'partials/complex';
+
+/* Start site's custom styles */
+.top-bar {
+  @include cuprum;
+  background: $wine;
+  height: 48px;
+  text-align: right;
+  
+  &.logged-in {
+    
+    span {
+      font-size: 20px;
+      font-weight: bold;
+      color: $wineOverlay;
+      display: inline-block;
+      padding-right: 15px;
+      border-right: 1px solid white;
+    }
+    
+    a {
+      text-transform: uppercase;
+      font-weight: normal;
+      color: white;
+      text-decoration: none;
+      font-size: 19px;
+    }
+  }
+  
+  a {
+    text-transform: uppercase;
+    line-height: 32px;
+    padding: 0 10px;
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    min-width: 120px;
+    margin-top: 8px;
+    text-align: left;
+    font-size: 18px;
+    
+    &.register {
+      border-right: 2px solid $wineOverlay;
+      padding-left: 27px;
+      background: transparent url(../imgs/register-icon.png) no-repeat 5px 40%;
+      margin-right: 5px;
+      
+      &:hover,
+      &:active,
+      &:focus {
+        background: $wineOverlay url(../imgs/register-icon-active.png) no-repeat 5px 40%;
+      }
+    }
+    
+    &.access {
+      margin-left: 2px;
+      padding-left: 27px;
+      background: transparent url(../imgs/acces-icon-inactive.png) no-repeat 5px 40%;
+      
+      &:hover,
+      &:active,
+      &:focus {
+        background: $wineOverlay url(../imgs/access-icon.png) no-repeat 5px 40%;
+      }
+    }
+  }
+  
+  ul.dropdown-menu {
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    background: $wineOverlay;
+    color: white;
+    left: auto;
+    right: 15px;
+    top: 46px;
+    
+    li {
+      padding-left: 10px;
+      padding-right: 10px;
+      
+      &:last-child a {
+        border: 0; 
+      }
+    }
+    
+    a {
+      color: white;
+      text-transform: uppercase;
+      border-bottom: 2px solid white;
+      margin: 0;
+      line-height: 32px;
+      padding-left: 10px;
+      padding-right: 10px;
+      
+      &:hover,
+      &:focus,
+      &:active {
+        background: $wine; 
+      }
+    }
+  }
+}
+
+.head {
+  border-bottom: 8px solid $wine; 
+}
+
+.logo {
+  padding-top: 32px;
+  padding-bottom: 32px;
+  
+  img {
+    max-width: 100%; 
+  }
+}
+
+.logo-side-menu {
+  padding-top: 32px;
+  padding-bottom: 32px;
+  
+  &.w-buy {
+    
+    ul {
+      
+      li {
+        
+        &:nth-child(3) {
+          border: 0;
+        }
+          
+        a.buy {
+          background: $salmon;
+          font-size: 22px;
+          color: white;
+          text-transform: uppercase;
+          font-weight: normal;
+          padding: 3px 5px;
+          text-decoration: none;
+          
+          span.glyphicon-shopping-cart {
+            color: $salmon;
+            background: $wine;
+            padding: 5px;
+            position: relative;
+            top: 4px;
+          }
+        }
+      }
+    }
+  }
+  
+  ul {
+    list-style-type: none;
+    margin: 70px 0 0 0;
+    padding: 0;
+    text-align: right;
+    
+    li {
+      display: inline-block;
+      border-right: 1px solid $wineOverlay;
+      
+      &:last-child {
+        border: 0; 
+      }
+      
+      a {
+        padding: 15px;
+        @include cuprum;
+        font-size: 19px;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: bold;
+        color: $wine;
+        
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+.location-breadcrumbs {
+  border-top: 46px solid $beige;
+  border-bottom: 1px solid $wine;
+  
+  h3 {
+    margin: 0;
+    @include cuprum;
+    font-weight: bold;
+    font-size: 30px;
+    text-transform: uppercase;
+    color: white;
+    margin-top: -40px;
+    margin-bottom: 10px;
+    padding-left: 15px;
+  }
+  
+  ol.breadcrumb {
+    border: 0;
+    border-radius: 0;
+    margin: 0;
+    background: transparent;
+    
+    li,
+    li a {
+      @include cuprum;
+      color: $brown;
+      font-size: 20px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    
+    a {
+      
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    
+    li+li:before {
+      color: $brown; 
+    }
+    
+    li.active {
+      color: $wine; 
+    }
+  }
+}
+
+.content-padding {
+  padding-top: 65px;
+  padding-bottom: 65px;
+}
+
+.login-register-blocks {
+  
+  h1 {
+    font-weight: bold;
+    @include cuprum;
+    font-size: 25px;
+    margin: 0 0 30px 0;
+    color: $wine;
+  }
+  
+  .blocks {
+    background: transparent url(../imgs/login-register-bg.png) no-repeat center center;
+    
+    .block {
+      min-height: 330px;
+      background: $beige;
+      padding-left: 0;
+      padding-right: 0;
+      
+      h2 {
+        height: 50px;
+        overflow: hidden;
+        line-height: 55px;
+        margin: 0;
+        padding: 0 30px 0 60px;
+        background: $wine url(../imgs/login-title-icon.png) no-repeat 30px center;
+        @include cuprum;
+        text-transform: uppercase;
+        color: white;
+        font-size: 25px;
+      }
+      
+      .form {
+        padding: 30px 30px 20px 30px;
+        
+        label {
+          display: block;
+          @include cuprum;
+          color: $wine;
+          font-size: 16px;
+          text-transform: uppercase;
+          font-weight: normal;
+          margin-bottom: 5px;
+          line-height: 1;
+        }
+        
+        input[type="text"] {
+          height: 45px;
+          width: 100%;
+          display: block;
+          background: white;
+          border: 1px solid $beigeBorder;
+          margin-bottom: 15px;
+          padding-left: 15px;
+          padding-right: 15px;
+        }
+        
+        a.forgot {
+          @include cuprum;
+          font-style: italic;
+          font-weight: normal;
+          font-size: 14px;
+          color: $wineOverlay;
+          position: relative;
+          top: -15px;
+        }
+        
+        hr {
+          border: 1px solid $beigeBorder;
+          margin: 0 0 10px 0;
+        }
+        
+        .submit {
+          text-align: right;
+          
+          span.remember {
+            display: inline-block;
+            padding-right: 30px;
+            @include cuprum;
+            font-size: 17px;
+            color: $wine;
+            font-weight: bold;
+          }
+          
+          input[type="submit"] {
+            display: inline-block;
+            width: 124px;
+            height: 36px;
+            border: 0;
+            background: $wineOverlay;
+            text-transform: uppercase;
+            color: white;
+            @include cuprum;
+            font-weight: normal;
+            font-size: 22px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.pre-footer {
+  background: $darkWine;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  text-align: center;
+  
+  &.footer-2 {
+    ul {
+      float: left;
+      border-right: 1px solid $dWineOverlay;
+      width: 33.333%;
+      
+      li {
+        border: 0;
+        display: block;
+        text-align: left;
+        line-height: 1;
+        padding-top: 5px;
+        padding-bottom: 5px;
+      }
+    }
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    
+    li {
+      padding: 0 30px;
+      border-right: 1px solid $dWineOverlay;
+      display: inline-block;
+      line-height: 1;
+      
+      &:last-child {
+        border: 0; 
+      }
+      
+      a {
+        @include cuprum;
+        font-size: 19px;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: $dWineOverlay;
+        
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+.footer {
+  @include cuprum;
+  font-size: 19px;
+  text-decoration: none;
+  color: white;
+  text-align: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background: $wine;
+  
+  a {
+    color: $wineOverlay;
+    text-decoration: underline;
+    padding: 0 5px;
+  }
+}
+
+.menus-list {
+  
+  .menu {
+    min-width: 380px;
+    width: 33.333%;
+    height: 660px;
+    padding: 190px 40px 15px 40px;
+    float: left;
+    background-position: top center;
+    background-repeat: no-repeat;
+    text-align: center;
+    
+    &.turist {
+      background-image: url(../imgs/menus/turist-bg.png);
+    }
+
+    &.buffetlibre {
+      background-image: url(../imgs/menus/buffetlibre-bg.png);
+    }
+    
+    &.premium {
+      background-image: url(../imgs/menus/premium-bg.png);
+    }
+    
+    &.kids {
+      background-image: url(../imgs/menus/kids-bg.png);
+    }
+    
+    h3 {
+      font-size: 26px;
+      color: $wine;
+      font-weight: bold;
+      @include cuprum;
+      margin: 15px 0 5px 0;
+      text-transform: uppercase;
+    }
+    
+    p {
+      @include cuprum;
+      font-weight: normal;
+      color: $grey;
+      font-size: 16px;
+      margin-bottom: 15px;
+    }
+    
+    hr {
+      margin: 0;
+      border: 1px dashed $salmon;
+    }
+    
+    span.no-drink {
+      padding: 0 15px;
+      background: $beige;
+      color: $salmon;
+      text-transform: uppercase;
+      @include cuprum;
+      font-size: 22px;
+      display: inline-block;
+      margin-top: 20px;
+      font-weight: bold;
+    }
+    
+    span.ribbon {
+      height: 45px;
+      display: inline-block;
+      width: 100%;
+      margin-top: 20px;
+      @include cuprum;
+      font-size: 26px;
+      font-weight: bold;
+      color: white;
+      line-height: 40px;
+      
+      &.turist-ribbon {
+        background: transparent url(../imgs/menus/turist-ribbon.png) no-repeat top left;
+        background-size: 100% auto;
+      }  
+
+      &.buffetlibre-ribbon {
+        background: transparent url(../imgs/menus/buffetlibre-ribbon.png) no-repeat top left;
+        background-size: 100% auto;
+      }
+      
+      &.premium-ribbon {
+        background: transparent url(../imgs/menus/premium-ribbon.png) no-repeat top left;
+        background-size: 100% auto;
+        margin-top: -17px;
+      }
+      
+      &.kids-ribbon {
+        background: transparent url(../imgs/menus/kids-ribbon.png) no-repeat top left;
+        background-size: 100% auto;
+        margin-top: 64px;
+      }
+      
+      span.small {
+        font-size: 18px;
+      }
+      
+      span.salmon {
+        color: $salmon; 
+      }
+      
+      span.wine {
+        color: $wine; 
+      }
+    }
+    
+    hr.end {
+      border: 0;
+      border-top: 1px solid $grey;
+      margin-top: 20px;
+      margin-bottom: 15px;
+    }
+    
+    span.amount {
+      @include cuprum;
+      font-size: 22px;
+      color: $grey;
+      font-weight: normal;
+      line-height: 30px;
+      margin-right: 10px;
+      vertical-align: middle;
+      
+      input[type="text"] {
+        max-width: 58px;
+        height: 30px;
+        border: 1px solid $beigeBorder;
+      }
+    }
+    
+    button {
+      background: $salmon;
+      border: 0;
+      @include cuprum;
+      text-transform: uppercase;
+      color: white;
+      font-size: 22px;
+      padding: 3px 5px;
+      line-height: 22px;
+      vertical-align: middle;
+      
+      span.glyphicon-shopping-cart { 
+        color: $wine; 
+      }
+    }
+  }
+  
+  .continue-button {
+    text-align: right;
+    
+    button {
+      margin-top: 15px;
+      margin-right: 18px; 
+      height: 40px;
+      widows: 195px;
+      background: $salmon;
+      @include cuprum;
+      font-size: 28px;
+      text-transform: uppercase;
+      color: white;
+      border: 0;
+      font-weight: normal;
+      
+      span.glyphicon-chevron-right {
+        background: $wine;
+        color: $salmon;
+        line-height: 40px;
+        position: relative;
+        top: -1px;
+        left: 7px;
+        padding: 0 12px 0 9px;
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+.order-table {
+  
+  table {
+    width: 100%;
+    border-spacing: 10px;
+    border-collapse: separate;
+  }
+  
+  tr > th,
+  tr > td {
+    text-align: center;
+  }
+  
+  tr > th:first-child,
+  tr > td:first-child,
+  tr > th:nth-child(3),
+  tr > td:nth-child(3),
+  tr > th:nth-child(4),,
+  tr > td:nth-child(4) {
+    width: 20%; 
+  }
+  
+  tr > th:last-child,
+  tr > td:last-child{
+    width: 10%; 
+  }
+  
+  tr > th:nth-child(2),
+  tr > td:nth-child(2){
+    width: 30%; 
+  }
+  
+  tr > th:first-child {
+    background: $beige;
+    color: $wine;
+    font-weight: bold;
+    font-size: 22px;
+    @include cuprum;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+  
+  tr.subheader > td {
+    background: $salmon;
+    color: white;
+    font-weight: bold;
+    font-size: 22px;
+    @include cuprum;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    
+    &:last-child {
+      background: transparent; 
+    }
+  }
+  
+  tr.w-border {
+    td {
+      border: 1px solid $beigeBorder;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      @include arial;
+      font-size: 22px;
+      color: $grey;
+      text-transform: uppercase;
+      line-height: 1;
+      
+      input[type="text"] {
+        max-width: 65px;
+        height: 42px;
+        border: 1px solid $beigeBorder;
+        text-align: center;
+      }
+      
+      a.refresh {
+        color: $salmon;
+        text-decoration: none;
+        border-bottom: 1px solid $beigeBorder;
+      }
+      
+      a.delete {
+        color: $wine;
+        text-decoration: none;
+        border-bottom: 1px solid $beigeBorder;
+      }
+    }
+  }
+}
+
+.order-table-result {
+  text-align: right;
+      
+  a.refresh-result {
+    color: $salmon;
+    text-decoration: none;
+    border-bottom: 1px solid $beigeBorder;
+    display: inline-block;
+    font-size: 22px;
+    margin-right: 15px;
+  }
+  
+  span.result {
+    display: inline-block;
+    padding: 10px 25px;
+    margin-top: 10px;
+    background: $salmon;
+    @include cuprum;
+    font-size: 22px;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+    line-height: 1;
+    
+    span:first-child {
+      display: inline-block;
+      margin-right: 15px;
+      padding-right: 15px;
+      border-right: 1px solid white;
+    }
+  }
+}
+
+.date {
+  hr.separator {
+    border: 0;
+    border-top: 1px solid $beigeBorder;
+  }
+  
+  table {
+    width: 100%;
+    border-spacing: 10px;
+    border-collapse: separate;
+  }
+  
+  tr > th,
+  tr > td {
+    text-align: center;
+  }
+  
+  tr > th:first-child {
+    background: $beige;
+    color: $wine;
+    @include cuprum;
+    font-weight: bold;
+    font-size: 22px;
+    width: 20% !important;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+  
+  tr > th:nth-child(2),
+  tr > th:last-child {
+    @include cuprum;
+    font-size: 20px;
+    color: $grey;
+    font-weight: bold;
+    
+    input[type="text"] {
+      width: 100%;
+      max-width: 150px;
+      height: 32px;
+      border: 1px solid $beigeBorder;
+      margin-left: 15px;
+      margin-right: 15px;
+    }
+    
+    a.calendar {
+      color: $salmon;
+      text-decoration: none;
+      font-size: 24px;
+      position: relative;
+      top: 4px;
+    }
+  }
+  
+  tr > td:last-child {
+    @include cuprum;
+    color: $wine;
+    font-size: 18px;
+    text-align: left;
+    font-weight: bold;
+    padding-left: 5%;
+    padding-right: 5%;
+    
+    span {
+      border-top: 1px solid $salmon;
+      display: block;
+      padding-top: 5px;
+    }
+  }
+}
+
+.passenger {
+  hr.separator {
+    border: 0;
+    border-top: 1px solid $beigeBorder;
+  }
+  
+  table {
+    width: 100%;
+    border-spacing: 10px;
+    border-collapse: separate;
+  }
+  
+  tr > th {
+    text-align: center;
+  }
+  
+  tr > th:first-child {
+    background: $beige;
+    color: $wine;
+    @include cuprum;
+    font-weight: bold;
+    font-size: 22px;
+    width: 20% !important;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+  
+  tr > th:last-child {
+    width: 80%;
+    @include cuprum;
+    color: $beigeBorder;
+    font-size: 22px;
+    font-weight: normal;
+    
+    input[type="text"] {
+      max-width: 500px;
+      width: 100%;
+      height: 32px;
+      border: 1px solid $beigeBorder;
+    }
+  }
+  
+  button {
+    background: $wine;
+    color: white;
+    font-size: 26px;
+    padding: 5px 25px;
+    float: right;
+    @include cuprum;
+    border: 0;
+    text-transform: uppercase;
+    line-height: 1;
+    
+    span.glyphicon-shopping-cart {
+      padding-left: 0;
+      padding-right: 10px;
+      position: relative;
+      top: 2px;
+    }
+  }
+}
+
+.success-buy {
+  text-align: center;
+  
+  h3 {
+    margin: 0 0 25px 0;
+    @include cuprum;
+    font-weight: bold;
+    color: $wine;
+    font-size: 34px;
+    text-align: center;
+    
+    span.salmon {
+      text-transform: uppercase;
+      color: $salmon;
+    }
+      
+    span.wine {
+      color: $wine; 
+    }
+  }
+  
+  p {
+    @include cuprum;
+    font-weight: normal;
+    font-size: 20px;
+    color: $beigeBorder;
+    text-align: center;
+  }
+  
+  hr.separator {
+    border: 0;
+    border-top: 1px solid $beigeBorder;
+    margin: 45px 0;
+  }
+  
+  a {
+    text-decoration: none;
+    
+    span.link-label {
+      line-height: 1;
+      padding: 3px 15px;
+      background: $salmon;
+      font-weight: normal;
+      font-size: 28px;
+      text-transform: uppercase;
+      color: white;
+      @include cuprum;
+    }
+    
+    span.glyphicon-print,
+    span.glyphicon-envelope {
+      font-size: 32px;
+      color: $wine;
+      line-height: 1;
+      position: relative;
+      top: 7px;
+      left: 5px;
+    }
+  }
+  
+  img.logo-fade {
+    max-width: 100%;
+    margin: 60px 0;
+  }
+}
+
+.register-form {
+  border-right: 1px solid $grey;
+  
+  h3 {
+    margin: 0 0 25px 0;
+    @include cuprum;
+    font-weight: bold;
+    color: $wine;
+    font-size: 26px;
+    text-align: center;
+    position: relative;
+    
+    &:before,
+    &::before {
+      content: '';
+      width: 10px;
+      height: 10px;
+      border-radius: 5px;
+      border-radius: 50%;
+      background: $salmon;
+      position: absolute;
+      top: 50%;
+      margin-top: -5px;
+      left: -10px;
+    }
+  }
+  
+  span.form-title {
+    display: inline-block;
+    padding: 0 15px;
+    float: right;
+    width: 75%;
+    line-height: 42px;
+    height: 42px;
+    background: $beige;
+    color: $wine;
+    @include cuprum;
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+  }
+  
+  label {
+    width: 25%;
+    float: left;
+    @include cuprum;
+    font-weight: normal;
+    font-size: 18px;
+    color: $grey;
+    text-transform: uppercase;
+    line-height: 50px;
+    margin: 0 0 15px 0;
+    text-align: right;
+    padding: 0 15px;
+    
+    &.double-line {
+      line-height: 25px; 
+    }
+  }
+  
+  input[type="text"] {
+    width: 75%;
+    float: right;
+    border: 1px solid $beigeBorder;
+    height: 50px;
+    margin: 0 0 15px 0;
+  }
+  
+  span.tos {
+    @include cuprum;
+    font-weight: normal;
+    font-size: 18px;
+    color: $grey;
+    display: inline-block;
+    max-width: 75%;
+    float: right;
+    line-height: 1.1;
+    
+    a {
+      color: $wine; 
+    }
+  }
+}
+
+.register-banner {
+  
+  img {
+    width: 100%; 
+  }
+}
+
+.submit-registration {
+  text-align: right;
+  margin-top: 25px;
+  
+  a {
+    @include cuprum;
+    font-weight: normal;
+    font-size: 18px;
+    color: $wine;
+    display: inline-block;
+  }
+  
+  button {
+    width: 100%;
+    max-width: 220px; 
+    height: 50px;
+    display: inline-block;
+    border: 0;
+    background: $wineOverlay;
+    color: white;
+    @include cuprum;
+    font-size: 30px;
+    font-weight: normal;
+    text-transform: uppercase;
+    line-height: 1;
+    padding: 10px 25px;
+    margin-left: 15px;
+  }
+}
+
+.main-slider {
+  padding: 0;
+  margin-top: -10px;
+  border-top: 30px solid $beige;
+  border-bottom: 10px solid $wineOverlay;
+  
+  .item {
+    height: 335px;
+    background-size: 100% auto;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+  
+  .carousel-control .glyphicon-chevron-left,
+  .carousel-control .glyphicon-chevron-right,
+  .carousel-control .icon-prev,
+  .carousel-control .icon-next {
+    background: $wine;
+    color: $salmon;
+    text-shadow: none;
+    opacity: 1;
+    border-radius: 15px;
+    font-size: 18px;
+    line-height: 30px;
+  }
+  
+  .carousel-indicators {
+    left: 50%;
+    width: 80%;
+    margin-left: -40%;
+    text-align: right;
+    
+    li {
+      border-color: $wine;
+      background: $wine;
+      box-shadow: none;
+      
+      &.active {
+        background: $salmon;
+      }
+    }
+  }
+}
+
+.cupons {
+   
+  .cupon {
+    width: 33.333%;
+    float: left;
+    min-width: 322px;
+    height: 313px;
+    margin-bottom: 15px;
+    background: transparent url(../imgs/cupon-bg.png) no-repeat center top;
+    text-align: center;
+    
+    a {
+      text-decoration: none;
+      display: block;
+    }
+    
+    h3 {
+      @include intro;
+      text-shadow: 0 0 3px black;
+      color: white;
+      text-transform: uppercase;
+      margin-top: 29px;
+      margin-bottom: 9px;
+    }
+    
+    img {
+      height: 75px; 
+    }
+    
+    p {
+      margin-top: 45px;
+      @include cuprum;
+      font-weight: normal;
+      font-size: 18px;
+      color: $grey;
+      text-transform: uppercase;
+      
+      &.small {
+        font-size: 14px;
+        color: $wineOverlay;
+        margin-top: 32px;
+      }
+      
+      span.salmon {
+        color: $salmon; 
+      }
+    }
+    
+    span.link {
+      font-size: 12px;
+      @include cuprum;
+      font-weight: normal;
+      color: $salmon;
+      text-transform: uppercase;
+      position: relative;
+      top: -5px;
+      left: 80px;
+    }
+  }
+}
+
+.place-info {
+  text-align: center;
+  border-right: 1px solid $wine;
+  
+  img.place-logo {
+    width: 100%;
+    max-width: 319px;
+    border: 1px solid $beigeBorder;
+    margin-bottom: 25px;
+  }
+  
+  .more-info {
+    background: transparent url(../imgs/place-info-bg.png) no-repeat center top;
+    height: 370px;
+    text-align: center;
+    padding: 68px 15px 0 15px;
+    
+    h3 {
+      @include cuprum;
+      font-weight: bold;
+      font-size: 18px;
+      text-transform: uppercase;
+      color: $wine;
+    }
+    
+    p {
+      @include cuprum;
+      font-weight: normal;
+      font-size: 18px;
+      text-transform: uppercase;
+      color: $grey;
+      
+      &.time {
+        margin-top: 59px;
+        margin-bottom: 0;
+        color: white;
+        text-transform: inherit;
+        font-size: 21px;
+      }
+    }
+  }
+}
+
+.place-menus {
+  
+  .menu {
+    float: left;
+    width: 50%;
+    min-width: 407px;
+    height: 748px;
+    background-repeat: no-repeat;
+    background-position: center top;
+    
+    &.kids {
+      background-image: url(../imgs/place-info-kids-bg.png);
+    }
+    
+    &.turist {
+      background-image: url(../imgs/place-info-turist-bg.png);
+    }
+    
+    &.buffetlibre {
+      background-image: url(../imgs/place-info-buffetlibre-bg.png);
+    }
+    
+    &.premium {
+      background-image: url(../imgs/place-info-premium-bg.png);
+    }
+    
+    .first,
+    .main,
+    .desert,
+    .drinks {
+      height: 185px;
+      margin-top: 160px;
+      text-align: center;
+      padding: 0 45px;
+      
+      h3 {
+        @include cuprum;
+        font-weight: bold;
+        font-size: 20px;
+        text-transform: uppercase;
+        color: $wine;
+        margin-bottom: 15px;
+      }
+      
+      p {
+        @include cuprum;
+        font-weight: normal;
+        font-size: 18px;
+        color: $grey;
+        line-height: 1;
+        margin: 0 0 10px 0;
+      }
+    }
+    
+    .main {
+      height: 165px;
+      padding-top: 28px;
+      text-align: center;
+      padding: 0 45px;
+      margin-top: 0;
+    }
+    
+    .desert {
+      height: 80px;
+      padding-top: 28px;
+      text-align: center;
+      padding: 0 45px;
+      margin-top: 0;
+    }
+    
+    .drinks {
+      height: 75px;
+      padding-top: 28px;
+      text-align: center;
+      padding: 0 45px;
+      margin-top: 0;
+      
+      span.no-drink {
+        padding: 3px 15px;
+        background: $beige;
+        color: $salmon;
+        text-transform: uppercase;
+        font-weight: normal;
+        font-size: 18px;
+        @include cuprum;
+        position: relative;
+        top: 20px;
+      }
+    }
+  }
+  
+  .kids-menu-wrapper {
+    margin-top: 25px;
+  }
+  
+  .kids-menu-details {
+    border: 2px solid $beigeBorder;
+    max-width: 828px;
+    float: none;
+    margin: 0 auto;
+    padding: 15px;
+    
+    .info {
+      background: transparent url(../imgs/kids-menu-details.png) no-repeat center center;
+      background-size: 100% auto;
+      background-size: cover;
+      min-height: 229px;
+      text-align: center;
+      
+      h2 {
+        padding-bottom: 15px;
+        background: transparent url(../imgs/menu-kids-title-bg.png) no-repeat center bottom;
+        @include cuprum;
+        color: $wine;
+        font-weight: bold;
+        font-size: 28px;
+        text-transform: uppercase;
+        margin: 0 0 7px 0;
+        padding-top: 7px;
+        
+        span.small {
+          text-transform: initial;
+          font-weight: bold;
+          font-size: 18px;
+          color: $wine;
+        }
+      }
+      
+      h3 {
+        @include cuprum;
+        color: $wine;
+        font-weight: bold;
+        font-size: 20px;
+        text-transform: uppercase;
+        margin: 0 0 7px 0;
+        
+        &.bottom-separator {
+          padding-bottom: 7px;
+          background: transparent url(../imgs/p-bottom-bg.png) no-repeat center bottom;
+        }
+      }
+      
+      p {
+        @include cuprum;
+        color: white;
+        font-weight: regular;
+        font-size: 18px;
+        padding: 0;
+        margin: 0 0 2px 0;
+        line-height: 1;
+        
+        &.bottom-separator {
+          padding-bottom: 10px;
+          background: transparent url(../imgs/p-bottom-bg.png) no-repeat center bottom;
+          margin-bottom: 5px;
+        }
+      }
+      
+      span.no-drink-tag {
+        background: $salmon;
+        display: inline-block;
+        padding: 3px 15px;
+        color: white;
+        @include cuprum;
+        font-size: 16px;
+        font-weight: normal;
+        text-transform: uppercase;
+        line-height: 1;
+      }
+    }
+  }
+}
+
+.place-pictures {
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 15px;
+  margin-top: 15px;
+  border-top: 1px solid $wine;
+  
+  .wrapper {
+    background: $beige;
+    padding: 15px;
+    text-align: center;
+    
+    a.thumb {
+      display: inline-block;
+      width: 30%;
+      background: white;
+      padding: 10px 10px 25px 10px;
+      position: relative;
+      margin-left: 1px;
+      margin-right: 1px;
+      
+      span.image {
+        display: inline-block;
+        width: 100%;
+        height: 170px;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: 100% auto;
+        background-size: cover;
+      } 
+      
+      span.glyphicon-zoom-in {
+        position: absolute;
+        top: auto;
+        left: auto;
+        right: 10px;
+        bottom: 8px;
+        color: $wine;
+      }
+    }
+  }
+}
+
+.voucher-container {
+  float: none;
+  width: 750px;
+  overflow: hidden;
+  margin: 0 auto;
+  
+  .voucher-cupon {
+    border-bottom: 2px dashed black;
+    padding: 10px;
+    float: left;
+    width: 50%;
+    
+    &:nth-child(2n+1) {
+      border-right: 2px dashed black; 
+    }
+    
+    .heading {
+      padding-left: 90px;
+      position: relative;
+      
+      img.logo {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 0;
+      }
+      
+      h3 {
+        @include arial;
+        color: black;
+        font-size: 14px;
+        font-weight: bold;
+        margin: 0 0 6px 0;
+      }
+      
+      span.small {
+        display: block;
+        @include arial;
+        color: black;
+        font-size: 11px;
+        font-weight: normal;
+        margin: 0;
+      }
+    }
+    
+    .divider {
+      text-align: center;
+      
+      &.smaller {
+        max-height: 10px; 
+      }
+      
+      img {
+        max-width: 100%;
+        
+        &.second-separator {
+          position: relative;
+          top: -7.5px;
+        }
+      }
+    }
+    
+    .info {
+      text-align: center;
+      
+      h2 {
+        @include arial;
+        color: black;
+        font-size: 16px;
+        font-weight: bold;
+        margin: 5px 0 0 0;
+        text-transform: uppercase;
+      }
+      
+      h3 {
+        @include arial;
+        color: black;
+        font-size: 14px;
+        font-weight: bold;
+        margin: 0 0 3px 0;
+        text-transform: uppercase;
+      }
+      
+      p {
+        display: block;
+        @include arial;
+        color: black;
+        font-size: 10px;
+        font-weight: normal;
+        margin: 0; 
+        
+        &.cuprum {
+          font-weight: bold;
+          @include cuprum;
+          font-size: 14px;
+          line-height: 1;
+          
+          &.tag {
+            background: black;
+            color: white;
+            font-size: 18px;
+            padding: 2px 0;
+            line-height: 1;
+          }
+        }
+      }
+    }
+  }
+}
+
+.bootstrap-datetimepicker-widget {
+  margin-left: 50px; 
+}
+/* End site's custom styles */
+
+/* Import responsive media queries */
+@import 'partials/media-queries';

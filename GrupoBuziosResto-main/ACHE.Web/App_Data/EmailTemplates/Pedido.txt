@@ -1,0 +1,47 @@
+﻿<table style="font-family: Arial,Helvetica,sans-serif;" width="550" align="center" border="0" cellpadding="0" cellspacing="0">
+	<tbody>
+		<tr>
+			<td colspan="3" style="padding:10px 0 15px 0" align="left">
+				<img src="http://www.grupobuziosresto.com/imgs/logo.png" alt="GrupoBuziosRestó" />
+			</td>
+		</tr>
+		<tr><td colspan="3"  width="100%" style="border-top:solid 1px #e8e8e8;display:block"></td></tr>
+		<tr>
+			<td colspan="3" style="padding: 20px 20px 10px; font-size: 12px; color: rgb(51, 51, 51); line-height: 18px;">
+				<span style="font-family:Arial;font-size:18px;color:#333333;padding-bottom:3px">
+					Estimado/a <NOMBRE>,
+				</span>
+				<p>Su pedido #<IDPEDIDO> ha sido recibido. Le contestaremos a la brevedad.</p>
+				<br/>
+				<table width="100%" align="center" cellpadding="3" cellspacing="2">
+					<tr>
+						<td bgcolor="#fff" colspan="2">Detalle del pedido</td>
+					</tr>
+					<tr bgcolor="#CCCCCC">
+						<td bgcolor="#CCCCCC" style='text-align:left'>Tipo</td>
+						<td bgcolor="#CCCCCC" style='text-align:right'>Precio Unitario</td>
+					</tr>
+					<tr>
+						<td>&nbsp;</td>
+						<td>&nbsp;</td>
+					</tr>
+					<DETALLE>
+				</table>
+				<br /><br />
+				<b>Muchas Gracias, Grupo Buzios Resto.</b><br />
+				Email: <a href="mailto:info@grupobuziosresto.com">info@grupobuziosresto.com</a><br />
+				Web: http://www.grupobuziosresto.com<br />
+				Atención al cliente: 0115275-0075
+				<br />Horario : Lunes a Viernes de 09.30 a 18.30 hs.
+			</td>
+		</tr>
+		<tr>
+			<td colspan="3"  style="padding-top:10px;border-top:solid 1px #e8e8e8">
+				<span style="font-family:Arial;font-size:12px;color:#999999">
+					No responder este mail.
+				</span>
+			</td>
+		</tr>
+		<tr><td colspan="3"  height="15" style="font-size:1px">&nbsp;</td></tr>
+	</tbody>
+</table>

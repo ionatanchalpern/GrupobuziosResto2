@@ -1,0 +1,14 @@
+/*-----------DEFAULT-----------*/
+body {
+	background:#fff;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+}
+ul{
+	list-style: disc;
+	padding-left: 16px;
+}
+h3 {
+	margin: 10px 0;
+	font: 18px 'Open Sans', sans-serif;
+}

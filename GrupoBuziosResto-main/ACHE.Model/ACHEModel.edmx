@@ -1,0 +1,1380 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="ACHE.Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2005" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityType Name="LugaresTraslados">
+          <Key>
+            <PropertyRef Name="IDLugarTraslado" />
+          </Key>
+          <Property Name="IDLugarTraslado" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IDProveedor" Type="int" Nullable="false" />
+          <Property Name="Nombre" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Tipo" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="Activo" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Menues">
+          <Key>
+            <PropertyRef Name="IDMenu" />
+          </Key>
+          <Property Name="IDMenu" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IDRestaurant" Type="int" Nullable="false" />
+          <Property Name="TipoMenu" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="Entrada" Type="text" Nullable="false" />
+          <Property Name="PlatoPrincipal" Type="text" Nullable="false" />
+          <Property Name="Postre" Type="text" />
+          <Property Name="IncluyeBebida" Type="bit" Nullable="false" />
+          <Property Name="Imagen" Type="varchar" MaxLength="50" />
+          <Property Name="ImagenMenu" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Parametros">
+          <Key>
+            <PropertyRef Name="IDParametro" />
+          </Key>
+          <Property Name="IDParametro" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TextoBeneficios" Type="text" Nullable="false" />
+          <Property Name="TextoTraslados" Type="text" Nullable="false" />
+          <Property Name="AdicionalNocturno" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PasajerosPorPedidoTraslado">
+          <Key>
+            <PropertyRef Name="IDPasajerosPorPedidoTraslado" />
+          </Key>
+          <Property Name="IDPasajerosPorPedidoTraslado" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IDPedidoTraslado" Type="int" />
+          <Property Name="Nombre" Type="varchar" MaxLength="50" />
+          <Property Name="DNI" Type="varchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="Pedidos">
+          <Key>
+            <PropertyRef Name="IDPedido" />
+          </Key>
+          <Property Name="IDPedido" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FechaAlta" Type="datetime" Nullable="false" />
+          <Property Name="IDUsuario" Type="int" Nullable="false" />
+          <Property Name="Total" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="FechaEstadiaDesde" Type="datetime" Nullable="false" />
+          <Property Name="FechaEstadiaHasta" Type="datetime" Nullable="false" />
+          <Property Name="Pasajero" Type="varchar" MaxLength="100" />
+          <Property Name="EmailEnvio" Type="varchar" MaxLength="128" />
+          <Property Name="NroDocumento" Type="varchar" MaxLength="50" />
+          <Property Name="PagoPor" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="PedidosDetalle">
+          <Key>
+            <PropertyRef Name="IDDetalle" />
+          </Key>
+          <Property Name="IDDetalle" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IDPedido" Type="int" Nullable="false" />
+          <Property Name="IDProducto" Type="int" Nullable="false" />
+          <Property Name="Precio" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="PrecioOperador" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="Validado" Type="bit" />
+          <Property Name="FechaValidacion" Type="datetime" />
+          <Property Name="IDRestauranteValidacion" Type="int" />
+          <Property Name="CantCenas" Type="int" Nullable="false" />
+          <Property Name="CantPasajeros" Type="int" Nullable="false" />
+          <Property Name="DigitoVerficador" Type="int" />
+        </EntityType>
+        <EntityType Name="PedidosTraslado">
+          <Key>
+            <PropertyRef Name="IDPedidoTraslado" />
+          </Key>
+          <Property Name="IDPedidoTraslado" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Estado" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="CantAdultos" Type="int" Nullable="false" />
+          <Property Name="CantMenoresAsiento" Type="int" Nullable="false" />
+          <Property Name="CantMenoresGratis" Type="int" Nullable="false" />
+          <Property Name="FechaIda" Type="datetime" />
+          <Property Name="FechaVuelta" Type="datetime" />
+          <Property Name="TipoServicio" Type="varchar" MaxLength="5" Nullable="false" />
+          <Property Name="Total" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="FechaAlta" Type="datetime" Nullable="false" />
+          <Property Name="AerolineaArribo" Type="varchar" MaxLength="50" />
+          <Property Name="VueloArribo" Type="varchar" MaxLength="50" />
+          <Property Name="HoraArribo" Type="varchar" MaxLength="50" />
+          <Property Name="AerolineaPartida" Type="varchar" MaxLength="50" />
+          <Property Name="VueloPartida" Type="varchar" MaxLength="50" />
+          <Property Name="HoraPartida" Type="varchar" MaxLength="50" />
+          <Property Name="EmailEnvio" Type="varchar" MaxLength="128" />
+          <Property Name="PagoPor" Type="varchar" MaxLength="100" />
+          <Property Name="Observaciones" Type="text" />
+          <Property Name="IDUsuario" Type="int" Nullable="false" />
+          <Property Name="IDServicio" Type="int" Nullable="false" />
+          <Property Name="IDLugarOrigen" Type="int" />
+          <Property Name="IDLugarDestino" Type="int" />
+          <Property Name="Precio" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="DireccionHotel1" Type="varchar" MaxLength="100" />
+          <Property Name="DireccionHotel2" Type="varchar" MaxLength="100" />
+          <Property Name="DireccionHotel3" Type="varchar" MaxLength="100" />
+          <Property Name="Hotel1" Type="varchar" MaxLength="50" />
+          <Property Name="Hotel2" Type="varchar" MaxLength="50" />
+          <Property Name="Hotel3" Type="varchar" MaxLength="50" />
+          <Property Name="Hotel4" Type="varchar" MaxLength="50" />
+          <Property Name="DireccionHotel4" Type="varchar" MaxLength="100" />
+          <Property Name="NroFile" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="PreciosProductos">
+          <Key>
+            <PropertyRef Name="IDPrecioProducto" />
+          </Key>
+          <Property Name="IDPrecioProducto" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IDProducto" Type="int" Nullable="false" />
+          <Property Name="FechaDesde" Type="datetime" Nullable="false" />
+          <Property Name="FechaHasta" Type="datetime" Nullable="false" />
+          <Property Name="PrecioOperador" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="PrecioRestaurante" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PreciosServicios">
+          <Key>
+            <PropertyRef Name="IDPrecioServicio" />
+          </Key>
+          <Property Name="IDPrecioServicio" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IDServicio" Type="int" />
+          <Property Name="FechaDesde" Type="datetime" Nullable="false" />
+          <Property Name="FechaHasta" Type="datetime" Nullable="false" />
+          <Property Name="PrecioRegular" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="PrecioPrivado" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="ObservacionesRegular" Type="text" />
+          <Property Name="ObservacionesPrivado" Type="text" />
+          <Property Name="IDUsuario" Type="int" />
+        </EntityType>
+        <EntityType Name="Productos">
+          <Key>
+            <PropertyRef Name="IDProducto" />
+          </Key>
+          <Property Name="IDProducto" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Tipo" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="Entrada" Type="text" Nullable="false" />
+          <Property Name="PlatoPrincipal" Type="text" Nullable="false" />
+          <Property Name="Postre" Type="text" Nullable="false" />
+          <Property Name="IncluyeBebida" Type="bit" Nullable="false" />
+          <Property Name="Activo" Type="bit" Nullable="false" />
+          <Property Name="Precio" Type="int" Nullable="false" />
+          <Property Name="FechaAlta" Type="datetime" Nullable="false" />
+          <Property Name="PrecioOperador" Type="int" Nullable="false" />
+          <Property Name="PrecioProxTemp" Type="int" Nullable="false" />
+          <Property Name="PrecioOperadorProxTemp" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Proveedores">
+          <Key>
+            <PropertyRef Name="IDProveedor" />
+          </Key>
+          <Property Name="IDProveedor" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Nombre" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Email" Type="varchar" MaxLength="128" Nullable="false" />
+          <Property Name="Telefono" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Logo" Type="varchar" MaxLength="128" />
+          <Property Name="Observaciones" Type="text" />
+          <Property Name="Activo" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Restaurantes">
+          <Key>
+            <PropertyRef Name="IDRestaurant" />
+          </Key>
+          <Property Name="IDRestaurant" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Nombre" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Email" Type="varchar" MaxLength="128" Nullable="false" />
+          <Property Name="Pwd" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Direccion" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="Ciudad" Type="varchar" MaxLength="100" />
+          <Property Name="HorarioAtencion" Type="varchar" MaxLength="100" />
+          <Property Name="Telefono" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Activo" Type="bit" Nullable="false" />
+          <Property Name="FechaAlta" Type="datetime" Nullable="false" />
+          <Property Name="Observaciones" Type="text" />
+          <Property Name="Logo" Type="varchar" MaxLength="50" />
+          <Property Name="Imagen1" Type="varchar" MaxLength="50" />
+          <Property Name="Imagen2" Type="varchar" MaxLength="50" />
+          <Property Name="Imagen3" Type="varchar" MaxLength="50" />
+          <Property Name="ImagenMapa" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Servicios">
+          <Key>
+            <PropertyRef Name="IDServicio" />
+          </Key>
+          <Property Name="IDServicio" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IDProveedor" Type="int" Nullable="false" />
+          <Property Name="Nombre" Type="varchar" MaxLength="200" Nullable="false" />
+          <Property Name="PrecioRegular" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="PrecioPrivado" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="ObservacionesRegular" Type="text" />
+          <Property Name="ObservacionesPrivado" Type="text" />
+          <Property Name="Activo" Type="bit" Nullable="false" />
+          <Property Name="EsPrivado" Type="bit" Nullable="false" />
+          <Property Name="MaxPasajeros" Type="int" Nullable="false" />
+          <Property Name="PrecioRegularNoRepresentado" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="PrecioPrivadoNoRepresentado" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="IDSubTipo" Type="int" Nullable="false" />
+          <Property Name="ServicioEspecial" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SubTipos">
+          <Key>
+            <PropertyRef Name="IDSubTipo" />
+          </Key>
+          <Property Name="IDSubTipo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Lugar1" Type="varchar" MaxLength="50" />
+          <Property Name="Lugar2" Type="varchar" MaxLength="50" />
+          <Property Name="Lugar3" Type="varchar" MaxLength="50" />
+          <Property Name="Tipo" Type="char" MaxLength="1" />
+        </EntityType>
+        <EntityType Name="Usuarios">
+          <Key>
+            <PropertyRef Name="IDUsuario" />
+          </Key>
+          <Property Name="IDUsuario" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TipoUsuario" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="Email" Type="varchar" MaxLength="128" Nullable="false" />
+          <Property Name="Pwd" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Empresa" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="Contacto" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="Direccion" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="Telefono" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Activo" Type="bit" Nullable="false" />
+          <Property Name="FechaAlta" Type="datetime" Nullable="false" />
+          <Property Name="Estado" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="Observaciones" Type="text" />
+          <Property Name="PagoPorHabilitado" Type="bit" Nullable="false" />
+          <Property Name="ServiciosEspeciales" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="UsuariosAdmin">
+          <Key>
+            <PropertyRef Name="IDUsuario" />
+          </Key>
+          <Property Name="IDUsuario" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Tipo" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="Nombre" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Email" Type="varchar" MaxLength="128" Nullable="false" />
+          <Property Name="Pwd" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="Activo" Type="bit" Nullable="false" />
+        </EntityType>
+        <Association Name="FK__LugaresTr__IDPro__276EDEB3">
+          <End Role="Proveedores" Type="Self.Proveedores" Multiplicity="1" />
+          <End Role="LugaresTraslados" Type="Self.LugaresTraslados" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Proveedores">
+              <PropertyRef Name="IDProveedor" />
+            </Principal>
+            <Dependent Role="LugaresTraslados">
+              <PropertyRef Name="IDProveedor" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__PreciosPr__IDPro__5CD6CB2B">
+          <End Role="Productos" Type="Self.Productos" Multiplicity="1" />
+          <End Role="PreciosProductos" Type="Self.PreciosProductos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Productos">
+              <PropertyRef Name="IDProducto" />
+            </Principal>
+            <Dependent Role="PreciosProductos">
+              <PropertyRef Name="IDProducto" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__PreciosSe__IDSer__6FE99F9F">
+          <End Role="Servicios" Type="Self.Servicios" Multiplicity="0..1" />
+          <End Role="PreciosServicios" Type="Self.PreciosServicios" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Servicios">
+              <PropertyRef Name="IDServicio" />
+            </Principal>
+            <Dependent Role="PreciosServicios">
+              <PropertyRef Name="IDServicio" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__PreciosSe__IDUsu__02FC7413">
+          <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="0..1" />
+          <End Role="PreciosServicios" Type="Self.PreciosServicios" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuarios">
+              <PropertyRef Name="IDUsuario" />
+            </Principal>
+            <Dependent Role="PreciosServicios">
+              <PropertyRef Name="IDUsuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Servicios__IDPro__30F848ED">
+          <End Role="Proveedores" Type="Self.Proveedores" Multiplicity="1" />
+          <End Role="Servicios" Type="Self.Servicios" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Proveedores">
+              <PropertyRef Name="IDProveedor" />
+            </Principal>
+            <Dependent Role="Servicios">
+              <PropertyRef Name="IDProveedor" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Menues_Restaurantes">
+          <End Role="Restaurantes" Type="Self.Restaurantes" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Menues" Type="Self.Menues" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Restaurantes">
+              <PropertyRef Name="IDRestaurant" />
+            </Principal>
+            <Dependent Role="Menues">
+              <PropertyRef Name="IDRestaurant" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PasajerosPorPedidoTraslado_PedidosTraslado">
+          <End Role="PedidosTraslado" Type="Self.PedidosTraslado" Multiplicity="0..1" />
+          <End Role="PasajerosPorPedidoTraslado" Type="Self.PasajerosPorPedidoTraslado" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PedidosTraslado">
+              <PropertyRef Name="IDPedidoTraslado" />
+            </Principal>
+            <Dependent Role="PasajerosPorPedidoTraslado">
+              <PropertyRef Name="IDPedidoTraslado" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Pedidos_Usuarios">
+          <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="1" />
+          <End Role="Pedidos" Type="Self.Pedidos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuarios">
+              <PropertyRef Name="IDUsuario" />
+            </Principal>
+            <Dependent Role="Pedidos">
+              <PropertyRef Name="IDUsuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PedidosDetalle_Pedidos">
+          <End Role="Pedidos" Type="Self.Pedidos" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="PedidosDetalle" Type="Self.PedidosDetalle" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Pedidos">
+              <PropertyRef Name="IDPedido" />
+            </Principal>
+            <Dependent Role="PedidosDetalle">
+              <PropertyRef Name="IDPedido" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PedidosDetalle_Productos">
+          <End Role="Productos" Type="Self.Productos" Multiplicity="1" />
+          <End Role="PedidosDetalle" Type="Self.PedidosDetalle" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Productos">
+              <PropertyRef Name="IDProducto" />
+            </Principal>
+            <Dependent Role="PedidosDetalle">
+              <PropertyRef Name="IDProducto" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PedidosDetalle_Restaurantes">
+          <End Role="Restaurantes" Type="Self.Restaurantes" Multiplicity="0..1" />
+          <End Role="PedidosDetalle" Type="Self.PedidosDetalle" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Restaurantes">
+              <PropertyRef Name="IDRestaurant" />
+            </Principal>
+            <Dependent Role="PedidosDetalle">
+              <PropertyRef Name="IDRestauranteValidacion" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PedidosTraslado_LugaresTraslados">
+          <End Role="LugaresTraslados" Type="Self.LugaresTraslados" Multiplicity="0..1" />
+          <End Role="PedidosTraslado" Type="Self.PedidosTraslado" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LugaresTraslados">
+              <PropertyRef Name="IDLugarTraslado" />
+            </Principal>
+            <Dependent Role="PedidosTraslado">
+              <PropertyRef Name="IDLugarOrigen" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PedidosTraslado_LugaresTraslados1">
+          <End Role="LugaresTraslados" Type="Self.LugaresTraslados" Multiplicity="0..1" />
+          <End Role="PedidosTraslado" Type="Self.PedidosTraslado" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LugaresTraslados">
+              <PropertyRef Name="IDLugarTraslado" />
+            </Principal>
+            <Dependent Role="PedidosTraslado">
+              <PropertyRef Name="IDLugarDestino" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PedidosTraslado_Servicios">
+          <End Role="Servicios" Type="Self.Servicios" Multiplicity="1" />
+          <End Role="PedidosTraslado" Type="Self.PedidosTraslado" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Servicios">
+              <PropertyRef Name="IDServicio" />
+            </Principal>
+            <Dependent Role="PedidosTraslado">
+              <PropertyRef Name="IDServicio" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PedidosTraslado_Usuarios">
+          <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="1" />
+          <End Role="PedidosTraslado" Type="Self.PedidosTraslado" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuarios">
+              <PropertyRef Name="IDUsuario" />
+            </Principal>
+            <Dependent Role="PedidosTraslado">
+              <PropertyRef Name="IDUsuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Servicios_SubTipos">
+          <End Role="SubTipos" Type="Self.SubTipos" Multiplicity="1" />
+          <End Role="Servicios" Type="Self.Servicios" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SubTipos">
+              <PropertyRef Name="IDSubTipo" />
+            </Principal>
+            <Dependent Role="Servicios">
+              <PropertyRef Name="IDSubTipo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="ACHEModelStoreContainer">
+          <EntitySet Name="LugaresTraslados" EntityType="Self.LugaresTraslados" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Menues" EntityType="Self.Menues" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Parametros" EntityType="Self.Parametros" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PasajerosPorPedidoTraslado" EntityType="Self.PasajerosPorPedidoTraslado" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Pedidos" EntityType="Self.Pedidos" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PedidosDetalle" EntityType="Self.PedidosDetalle" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PedidosTraslado" EntityType="Self.PedidosTraslado" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PreciosProductos" EntityType="Self.PreciosProductos" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PreciosServicios" EntityType="Self.PreciosServicios" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Productos" EntityType="Self.Productos" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Proveedores" EntityType="Self.Proveedores" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Restaurantes" EntityType="Self.Restaurantes" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Servicios" EntityType="Self.Servicios" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SubTipos" EntityType="Self.SubTipos" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Usuarios" EntityType="Self.Usuarios" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="UsuariosAdmin" EntityType="Self.UsuariosAdmin" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__LugaresTr__IDPro__276EDEB3" Association="Self.FK__LugaresTr__IDPro__276EDEB3">
+            <End Role="Proveedores" EntitySet="Proveedores" />
+            <End Role="LugaresTraslados" EntitySet="LugaresTraslados" />
+          </AssociationSet>
+          <AssociationSet Name="FK__PreciosPr__IDPro__5CD6CB2B" Association="Self.FK__PreciosPr__IDPro__5CD6CB2B">
+            <End Role="Productos" EntitySet="Productos" />
+            <End Role="PreciosProductos" EntitySet="PreciosProductos" />
+          </AssociationSet>
+          <AssociationSet Name="FK__PreciosSe__IDSer__6FE99F9F" Association="Self.FK__PreciosSe__IDSer__6FE99F9F">
+            <End Role="Servicios" EntitySet="Servicios" />
+            <End Role="PreciosServicios" EntitySet="PreciosServicios" />
+          </AssociationSet>
+          <AssociationSet Name="FK__PreciosSe__IDUsu__02FC7413" Association="Self.FK__PreciosSe__IDUsu__02FC7413">
+            <End Role="Usuarios" EntitySet="Usuarios" />
+            <End Role="PreciosServicios" EntitySet="PreciosServicios" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Servicios__IDPro__30F848ED" Association="Self.FK__Servicios__IDPro__30F848ED">
+            <End Role="Proveedores" EntitySet="Proveedores" />
+            <End Role="Servicios" EntitySet="Servicios" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Menues_Restaurantes" Association="Self.FK_Menues_Restaurantes">
+            <End Role="Restaurantes" EntitySet="Restaurantes" />
+            <End Role="Menues" EntitySet="Menues" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PasajerosPorPedidoTraslado_PedidosTraslado" Association="Self.FK_PasajerosPorPedidoTraslado_PedidosTraslado">
+            <End Role="PedidosTraslado" EntitySet="PedidosTraslado" />
+            <End Role="PasajerosPorPedidoTraslado" EntitySet="PasajerosPorPedidoTraslado" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Pedidos_Usuarios" Association="Self.FK_Pedidos_Usuarios">
+            <End Role="Usuarios" EntitySet="Usuarios" />
+            <End Role="Pedidos" EntitySet="Pedidos" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PedidosDetalle_Pedidos" Association="Self.FK_PedidosDetalle_Pedidos">
+            <End Role="Pedidos" EntitySet="Pedidos" />
+            <End Role="PedidosDetalle" EntitySet="PedidosDetalle" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PedidosDetalle_Productos" Association="Self.FK_PedidosDetalle_Productos">
+            <End Role="Productos" EntitySet="Productos" />
+            <End Role="PedidosDetalle" EntitySet="PedidosDetalle" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PedidosDetalle_Restaurantes" Association="Self.FK_PedidosDetalle_Restaurantes">
+            <End Role="Restaurantes" EntitySet="Restaurantes" />
+            <End Role="PedidosDetalle" EntitySet="PedidosDetalle" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PedidosTraslado_LugaresTraslados" Association="Self.FK_PedidosTraslado_LugaresTraslados">
+            <End Role="LugaresTraslados" EntitySet="LugaresTraslados" />
+            <End Role="PedidosTraslado" EntitySet="PedidosTraslado" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PedidosTraslado_LugaresTraslados1" Association="Self.FK_PedidosTraslado_LugaresTraslados1">
+            <End Role="LugaresTraslados" EntitySet="LugaresTraslados" />
+            <End Role="PedidosTraslado" EntitySet="PedidosTraslado" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PedidosTraslado_Servicios" Association="Self.FK_PedidosTraslado_Servicios">
+            <End Role="Servicios" EntitySet="Servicios" />
+            <End Role="PedidosTraslado" EntitySet="PedidosTraslado" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PedidosTraslado_Usuarios" Association="Self.FK_PedidosTraslado_Usuarios">
+            <End Role="Usuarios" EntitySet="Usuarios" />
+            <End Role="PedidosTraslado" EntitySet="PedidosTraslado" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Servicios_SubTipos" Association="Self.FK_Servicios_SubTipos">
+            <End Role="SubTipos" EntitySet="SubTipos" />
+            <End Role="Servicios" EntitySet="Servicios" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ACHE.Model" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="ACHEEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="LugaresTraslados" EntityType="ACHE.Model.LugaresTraslados" />
+          <EntitySet Name="Menues" EntityType="ACHE.Model.Menues" />
+          <EntitySet Name="Pedidos" EntityType="ACHE.Model.Pedidos" />
+          <EntitySet Name="PedidosDetalle" EntityType="ACHE.Model.PedidosDetalle" />
+          <EntitySet Name="Proveedores" EntityType="ACHE.Model.Proveedores" />
+          <EntitySet Name="Restaurantes" EntityType="ACHE.Model.Restaurantes" />
+          <EntitySet Name="Usuarios" EntityType="ACHE.Model.Usuarios" />
+          <EntitySet Name="UsuariosAdmin" EntityType="ACHE.Model.UsuariosAdmin" />
+          <AssociationSet Name="FK__LugaresTr__IDPro__4E88ABD4" Association="ACHE.Model.FK__LugaresTr__IDPro__4E88ABD4">
+            <End Role="Proveedores" EntitySet="Proveedores" />
+            <End Role="LugaresTraslados" EntitySet="LugaresTraslados" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Menues_Restaurantes" Association="ACHE.Model.FK_Menues_Restaurantes">
+            <End Role="Restaurantes" EntitySet="Restaurantes" />
+            <End Role="Menues" EntitySet="Menues" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Pedidos_Usuarios" Association="ACHE.Model.FK_Pedidos_Usuarios">
+            <End Role="Usuarios" EntitySet="Usuarios" />
+            <End Role="Pedidos" EntitySet="Pedidos" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PedidosDetalle_Pedidos" Association="ACHE.Model.FK_PedidosDetalle_Pedidos">
+            <End Role="Pedidos" EntitySet="Pedidos" />
+            <End Role="PedidosDetalle" EntitySet="PedidosDetalle" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PedidosDetalle_Restaurantes" Association="ACHE.Model.FK_PedidosDetalle_Restaurantes">
+            <End Role="Restaurantes" EntitySet="Restaurantes" />
+            <End Role="PedidosDetalle" EntitySet="PedidosDetalle" />
+          </AssociationSet>
+          <EntitySet Name="Parametros" EntityType="ACHE.Model.Parametros" />
+          <EntitySet Name="Productos" EntityType="ACHE.Model.Productos" />
+          <AssociationSet Name="FK_PedidosDetalle_Productos" Association="ACHE.Model.FK_PedidosDetalle_Productos">
+            <End Role="Productos" EntitySet="Productos" />
+            <End Role="PedidosDetalle" EntitySet="PedidosDetalle" />
+          </AssociationSet>
+          <EntitySet Name="PasajerosPorPedidoTraslado" EntityType="ACHE.Model.PasajerosPorPedidoTraslado" />
+          <EntitySet Name="SubTipos" EntityType="ACHE.Model.SubTipos" />
+          <EntitySet Name="PedidosTraslado" EntityType="ACHE.Model.PedidosTraslado" />
+          <AssociationSet Name="FK_PedidosTraslado_LugaresTraslados" Association="ACHE.Model.FK_PedidosTraslado_LugaresTraslados">
+            <End Role="LugaresTraslados" EntitySet="LugaresTraslados" />
+            <End Role="PedidosTraslado" EntitySet="PedidosTraslado" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PedidosTraslado_LugaresTraslados1" Association="ACHE.Model.FK_PedidosTraslado_LugaresTraslados1">
+            <End Role="LugaresTraslados" EntitySet="LugaresTraslados" />
+            <End Role="PedidosTraslado" EntitySet="PedidosTraslado" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PasajerosPorPedidoTraslado_PedidosTraslado" Association="ACHE.Model.FK_PasajerosPorPedidoTraslado_PedidosTraslado">
+            <End Role="PedidosTraslado" EntitySet="PedidosTraslado" />
+            <End Role="PasajerosPorPedidoTraslado" EntitySet="PasajerosPorPedidoTraslado" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PedidosTraslado_Usuarios" Association="ACHE.Model.FK_PedidosTraslado_Usuarios">
+            <End Role="Usuarios" EntitySet="Usuarios" />
+            <End Role="PedidosTraslado" EntitySet="PedidosTraslado" />
+          </AssociationSet>
+          <EntitySet Name="Servicios" EntityType="ACHE.Model.Servicios" />
+          <AssociationSet Name="FK_PedidosTraslado_Servicios" Association="ACHE.Model.FK_PedidosTraslado_Servicios">
+            <End Role="Servicios" EntitySet="Servicios" />
+            <End Role="PedidosTraslado" EntitySet="PedidosTraslado" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Servicios__IDPro__30F848ED" Association="ACHE.Model.FK__Servicios__IDPro__30F848ED">
+            <End Role="Proveedores" EntitySet="Proveedores" />
+            <End Role="Servicios" EntitySet="Servicios" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Servicios_SubTipos" Association="ACHE.Model.FK_Servicios_SubTipos">
+            <End Role="SubTipos" EntitySet="SubTipos" />
+            <End Role="Servicios" EntitySet="Servicios" />
+          </AssociationSet>
+          <EntitySet Name="PreciosProductos" EntityType="ACHE.Model.PreciosProductos" />
+          <AssociationSet Name="FK__PreciosPr__IDPro__5CD6CB2B" Association="ACHE.Model.FK__PreciosPr__IDPro__5CD6CB2B">
+            <End Role="Productos" EntitySet="Productos" />
+            <End Role="PreciosProductos" EntitySet="PreciosProductos" />
+          </AssociationSet>
+          <EntitySet Name="PreciosServicios" EntityType="ACHE.Model.PreciosServicios" />
+          <AssociationSet Name="FK__PreciosSe__IDSer__6FE99F9F" Association="ACHE.Model.FK__PreciosSe__IDSer__6FE99F9F">
+            <End Role="Servicios" EntitySet="Servicios" />
+            <End Role="PreciosServicios" EntitySet="PreciosServicios" />
+          </AssociationSet>
+          <AssociationSet Name="FK__PreciosSe__IDUsu__02FC7413" Association="ACHE.Model.FK__PreciosSe__IDUsu__02FC7413">
+            <End Role="Usuarios" EntitySet="Usuarios" />
+            <End Role="PreciosServicios" EntitySet="PreciosServicios" />
+          </AssociationSet>
+          </EntityContainer>
+        <EntityType Name="LugaresTraslados">
+          <Key>
+            <PropertyRef Name="IDLugarTraslado" />
+          </Key>
+          <Property Type="Int32" Name="IDLugarTraslado" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="IDProveedor" Nullable="false" />
+          <Property Type="String" Name="Nombre" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Tipo" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Type="Boolean" Name="Activo" Nullable="false" />
+          <NavigationProperty Name="Proveedores" Relationship="ACHE.Model.FK__LugaresTr__IDPro__4E88ABD4" FromRole="LugaresTraslados" ToRole="Proveedores" />
+          <NavigationProperty Name="PedidosTraslado" Relationship="ACHE.Model.FK_PedidosTraslado_LugaresTraslados" FromRole="LugaresTraslados" ToRole="PedidosTraslado" />
+          <NavigationProperty Name="PedidosTraslado1" Relationship="ACHE.Model.FK_PedidosTraslado_LugaresTraslados1" FromRole="LugaresTraslados" ToRole="PedidosTraslado" />
+        </EntityType>
+        <EntityType Name="Menues">
+          <Key>
+            <PropertyRef Name="IDMenu" />
+          </Key>
+          <Property Type="Int32" Name="IDMenu" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="IDRestaurant" Nullable="false" />
+          <Property Type="String" Name="TipoMenu" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Type="String" Name="Entrada" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PlatoPrincipal" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Postre" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="Boolean" Name="IncluyeBebida" Nullable="false" />
+          <Property Type="String" Name="Imagen" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ImagenMenu" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Restaurantes" Relationship="ACHE.Model.FK_Menues_Restaurantes" FromRole="Menues" ToRole="Restaurantes" />
+        </EntityType>
+        <EntityType Name="Pedidos">
+          <Key>
+            <PropertyRef Name="IDPedido" />
+          </Key>
+          <Property Type="Int32" Name="IDPedido" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="DateTime" Name="FechaAlta" Nullable="false" Precision="3" />
+          <Property Type="Int32" Name="IDUsuario" Nullable="false" />
+          <Property Type="Decimal" Name="Total" Nullable="false" Precision="18" Scale="0" />
+          <Property Type="DateTime" Name="FechaEstadiaDesde" Nullable="false" Precision="3" />
+          <Property Type="DateTime" Name="FechaEstadiaHasta" Nullable="false" Precision="3" />
+          <Property Type="String" Name="Pasajero" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="EmailEnvio" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="NroDocumento" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PagoPor" MaxLength="100" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Usuarios" Relationship="ACHE.Model.FK_Pedidos_Usuarios" FromRole="Pedidos" ToRole="Usuarios" />
+          <NavigationProperty Name="PedidosDetalle" Relationship="ACHE.Model.FK_PedidosDetalle_Pedidos" FromRole="Pedidos" ToRole="PedidosDetalle" />
+        </EntityType>
+        <EntityType Name="PedidosDetalle">
+          <Key>
+            <PropertyRef Name="IDDetalle" />
+          </Key>
+          <Property Type="Int32" Name="IDDetalle" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="IDPedido" Nullable="false" />
+          <Property Type="Int32" Name="IDProducto" Nullable="false" />
+          <Property Type="Decimal" Name="Precio" Nullable="false" Precision="18" Scale="0" />
+          <Property Type="Decimal" Name="PrecioOperador" Nullable="false" Precision="18" Scale="0" />
+          <Property Type="Boolean" Name="Validado" />
+          <Property Type="DateTime" Name="FechaValidacion" Precision="3" />
+          <Property Type="Int32" Name="IDRestauranteValidacion" />
+          <Property Type="Int32" Name="CantCenas" Nullable="false" />
+          <Property Type="Int32" Name="CantPasajeros" Nullable="false" />
+          <Property Type="Int32" Name="DigitoVerficador" />
+          <NavigationProperty Name="Pedidos" Relationship="ACHE.Model.FK_PedidosDetalle_Pedidos" FromRole="PedidosDetalle" ToRole="Pedidos" />
+          <NavigationProperty Name="Restaurantes" Relationship="ACHE.Model.FK_PedidosDetalle_Restaurantes" FromRole="PedidosDetalle" ToRole="Restaurantes" />
+          <NavigationProperty Name="Productos" Relationship="ACHE.Model.FK_PedidosDetalle_Productos" FromRole="PedidosDetalle" ToRole="Productos" />
+        </EntityType>
+        <EntityType Name="Proveedores">
+          <Key>
+            <PropertyRef Name="IDProveedor" />
+          </Key>
+          <Property Type="Int32" Name="IDProveedor" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Nombre" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Email" Nullable="false" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Telefono" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Logo" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Observaciones" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="Boolean" Name="Activo" Nullable="false" />
+          <NavigationProperty Name="LugaresTraslados" Relationship="ACHE.Model.FK__LugaresTr__IDPro__4E88ABD4" FromRole="Proveedores" ToRole="LugaresTraslados" />
+          <NavigationProperty Name="Servicios" Relationship="ACHE.Model.FK__Servicios__IDPro__30F848ED" FromRole="Proveedores" ToRole="Servicios" />
+        </EntityType>
+        <EntityType Name="Restaurantes">
+          <Key>
+            <PropertyRef Name="IDRestaurant" />
+          </Key>
+          <Property Type="Int32" Name="IDRestaurant" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Nombre" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Email" Nullable="false" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Pwd" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Direccion" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Ciudad" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="HorarioAtencion" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Telefono" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Boolean" Name="Activo" Nullable="false" />
+          <Property Type="DateTime" Name="FechaAlta" Nullable="false" Precision="3" />
+          <Property Type="String" Name="Observaciones" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Logo" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Imagen1" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Imagen2" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Imagen3" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ImagenMapa" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Menues" Relationship="ACHE.Model.FK_Menues_Restaurantes" FromRole="Restaurantes" ToRole="Menues" />
+          <NavigationProperty Name="PedidosDetalle" Relationship="ACHE.Model.FK_PedidosDetalle_Restaurantes" FromRole="Restaurantes" ToRole="PedidosDetalle" />
+        </EntityType>
+        <EntityType Name="Usuarios">
+          <Key>
+            <PropertyRef Name="IDUsuario" />
+          </Key>
+          <Property Type="Int32" Name="IDUsuario" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="TipoUsuario" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Type="String" Name="Email" Nullable="false" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Pwd" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Empresa" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Contacto" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Direccion" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Telefono" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Boolean" Name="Activo" Nullable="false" />
+          <Property Type="DateTime" Name="FechaAlta" Nullable="false" Precision="3" />
+          <Property Type="String" Name="Estado" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Type="String" Name="Observaciones" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="Boolean" Name="PagoPorHabilitado" Nullable="false" />
+          <NavigationProperty Name="Pedidos" Relationship="ACHE.Model.FK_Pedidos_Usuarios" FromRole="Usuarios" ToRole="Pedidos" />
+          <NavigationProperty Name="PedidosTraslado" Relationship="ACHE.Model.FK_PedidosTraslado_Usuarios" FromRole="Usuarios" ToRole="PedidosTraslado" />
+          <Property Name="ServiciosEspeciales" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="PreciosServicios" Relationship="ACHE.Model.FK__PreciosSe__IDUsu__02FC7413" FromRole="Usuarios" ToRole="PreciosServicios" />
+        </EntityType>
+        <EntityType Name="UsuariosAdmin">
+          <Key>
+            <PropertyRef Name="IDUsuario" />
+          </Key>
+          <Property Type="Int32" Name="IDUsuario" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Tipo" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Type="String" Name="Nombre" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Email" Nullable="false" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Pwd" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Type="Boolean" Name="Activo" Nullable="false" />
+        </EntityType>
+        <Association Name="FK__LugaresTr__IDPro__4E88ABD4">
+          <End Type="ACHE.Model.Proveedores" Role="Proveedores" Multiplicity="1" />
+          <End Type="ACHE.Model.LugaresTraslados" Role="LugaresTraslados" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Proveedores">
+              <PropertyRef Name="IDProveedor" />
+            </Principal>
+            <Dependent Role="LugaresTraslados">
+              <PropertyRef Name="IDProveedor" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Menues_Restaurantes">
+          <End Type="ACHE.Model.Restaurantes" Role="Restaurantes" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="ACHE.Model.Menues" Role="Menues" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Restaurantes">
+              <PropertyRef Name="IDRestaurant" />
+            </Principal>
+            <Dependent Role="Menues">
+              <PropertyRef Name="IDRestaurant" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Pedidos_Usuarios">
+          <End Type="ACHE.Model.Usuarios" Role="Usuarios" Multiplicity="1" />
+          <End Type="ACHE.Model.Pedidos" Role="Pedidos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuarios">
+              <PropertyRef Name="IDUsuario" />
+            </Principal>
+            <Dependent Role="Pedidos">
+              <PropertyRef Name="IDUsuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PedidosDetalle_Pedidos">
+          <End Type="ACHE.Model.Pedidos" Role="Pedidos" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="ACHE.Model.PedidosDetalle" Role="PedidosDetalle" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Pedidos">
+              <PropertyRef Name="IDPedido" />
+            </Principal>
+            <Dependent Role="PedidosDetalle">
+              <PropertyRef Name="IDPedido" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PedidosDetalle_Restaurantes">
+          <End Type="ACHE.Model.Restaurantes" Role="Restaurantes" Multiplicity="0..1" />
+          <End Type="ACHE.Model.PedidosDetalle" Role="PedidosDetalle" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Restaurantes">
+              <PropertyRef Name="IDRestaurant" />
+            </Principal>
+            <Dependent Role="PedidosDetalle">
+              <PropertyRef Name="IDRestauranteValidacion" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Parametros">
+          <Key>
+            <PropertyRef Name="IDParametro" />
+          </Key>
+          <Property Type="Int32" Name="IDParametro" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="TextoBeneficios" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="TextoTraslados" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="Decimal" Name="AdicionalNocturno" Nullable="false" Precision="18" Scale="2" />
+        </EntityType>
+        <EntityType Name="Productos">
+          <Key>
+            <PropertyRef Name="IDProducto" />
+          </Key>
+          <Property Type="Int32" Name="IDProducto" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Tipo" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Type="String" Name="Entrada" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PlatoPrincipal" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Postre" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="Boolean" Name="IncluyeBebida" Nullable="false" />
+          <Property Type="Boolean" Name="Activo" Nullable="false" />
+          <Property Type="Int32" Name="Precio" Nullable="false" />
+          <Property Type="DateTime" Name="FechaAlta" Nullable="false" Precision="3" />
+          <Property Type="Int32" Name="PrecioOperador" Nullable="false" />
+          <Property Type="Int32" Name="PrecioProxTemp" Nullable="false" />
+          <Property Type="Int32" Name="PrecioOperadorProxTemp" Nullable="false" />
+          <NavigationProperty Name="PedidosDetalle" Relationship="ACHE.Model.FK_PedidosDetalle_Productos" FromRole="Productos" ToRole="PedidosDetalle" />
+          <NavigationProperty Name="PreciosProductos" Relationship="ACHE.Model.FK__PreciosPr__IDPro__5CD6CB2B" FromRole="Productos" ToRole="PreciosProductos" />
+        </EntityType>
+        <Association Name="FK_PedidosDetalle_Productos">
+          <End Type="ACHE.Model.Productos" Role="Productos" Multiplicity="1" />
+          <End Type="ACHE.Model.PedidosDetalle" Role="PedidosDetalle" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Productos">
+              <PropertyRef Name="IDProducto" />
+            </Principal>
+            <Dependent Role="PedidosDetalle">
+              <PropertyRef Name="IDProducto" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="PasajerosPorPedidoTraslado">
+          <Key>
+            <PropertyRef Name="IDPasajerosPorPedidoTraslado" />
+          </Key>
+          <Property Name="IDPasajerosPorPedidoTraslado" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IDPedidoTraslado" Type="Int32" />
+          <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="DNI" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="PedidosTraslado" Relationship="ACHE.Model.FK_PasajerosPorPedidoTraslado_PedidosTraslado" FromRole="PasajerosPorPedidoTraslado" ToRole="PedidosTraslado" />
+        </EntityType>
+        <EntityType Name="SubTipos">
+          <Key>
+            <PropertyRef Name="IDSubTipo" />
+          </Key>
+          <Property Name="IDSubTipo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Lugar1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Lugar2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Lugar3" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Tipo" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <NavigationProperty Name="Servicios" Relationship="ACHE.Model.FK_Servicios_SubTipos" FromRole="SubTipos" ToRole="Servicios" />
+        </EntityType>
+        <EntityType Name="PedidosTraslado">
+          <Key>
+            <PropertyRef Name="IDPedidoTraslado" />
+          </Key>
+          <Property Name="IDPedidoTraslado" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Estado" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="CantAdultos" Type="Int32" Nullable="false" />
+          <Property Name="CantMenoresAsiento" Type="Int32" Nullable="false" />
+          <Property Name="CantMenoresGratis" Type="Int32" Nullable="false" />
+          <Property Name="FechaIda" Type="DateTime" Precision="3" />
+          <Property Name="FechaVuelta" Type="DateTime" Precision="3" />
+          <Property Name="TipoServicio" Type="String" Nullable="false" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="Total" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+          <Property Name="FechaAlta" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="AerolineaArribo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="VueloArribo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="HoraArribo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="AerolineaPartida" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="VueloPartida" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="HoraPartida" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="EmailEnvio" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Name="PagoPor" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Observaciones" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="IDUsuario" Type="Int32" Nullable="false" />
+          <Property Name="IDServicio" Type="Int32" Nullable="false" />
+          <Property Name="IDLugarOrigen" Type="Int32" />
+          <Property Name="IDLugarDestino" Type="Int32" />
+          <Property Name="Precio" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+          <Property Name="DireccionHotel1" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="DireccionHotel2" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="DireccionHotel3" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Hotel1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Hotel2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Hotel3" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Hotel4" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="DireccionHotel4" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="LugaresTrasladosOrigen" Relationship="ACHE.Model.FK_PedidosTraslado_LugaresTraslados" FromRole="PedidosTraslado" ToRole="LugaresTraslados" />
+          <NavigationProperty Name="LugaresTrasladosDestino" Relationship="ACHE.Model.FK_PedidosTraslado_LugaresTraslados1" FromRole="PedidosTraslado" ToRole="LugaresTraslados" />
+          <NavigationProperty Name="PasajerosPorPedidoTraslado" Relationship="ACHE.Model.FK_PasajerosPorPedidoTraslado_PedidosTraslado" FromRole="PedidosTraslado" ToRole="PasajerosPorPedidoTraslado" />
+          <NavigationProperty Name="Usuarios" Relationship="ACHE.Model.FK_PedidosTraslado_Usuarios" FromRole="PedidosTraslado" ToRole="Usuarios" />
+          <NavigationProperty Name="Servicios" Relationship="ACHE.Model.FK_PedidosTraslado_Servicios" FromRole="PedidosTraslado" ToRole="Servicios" />
+          <Property Name="NroFile" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <Association Name="FK_PedidosTraslado_LugaresTraslados">
+          <End Type="ACHE.Model.LugaresTraslados" Role="LugaresTraslados" Multiplicity="0..1" />
+          <End Type="ACHE.Model.PedidosTraslado" Role="PedidosTraslado" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LugaresTraslados">
+              <PropertyRef Name="IDLugarTraslado" />
+            </Principal>
+            <Dependent Role="PedidosTraslado">
+              <PropertyRef Name="IDLugarOrigen" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PedidosTraslado_LugaresTraslados1">
+          <End Type="ACHE.Model.LugaresTraslados" Role="LugaresTraslados" Multiplicity="0..1" />
+          <End Type="ACHE.Model.PedidosTraslado" Role="PedidosTraslado" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LugaresTraslados">
+              <PropertyRef Name="IDLugarTraslado" />
+            </Principal>
+            <Dependent Role="PedidosTraslado">
+              <PropertyRef Name="IDLugarDestino" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PasajerosPorPedidoTraslado_PedidosTraslado">
+          <End Type="ACHE.Model.PedidosTraslado" Role="PedidosTraslado" Multiplicity="0..1" />
+          <End Type="ACHE.Model.PasajerosPorPedidoTraslado" Role="PasajerosPorPedidoTraslado" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PedidosTraslado">
+              <PropertyRef Name="IDPedidoTraslado" />
+            </Principal>
+            <Dependent Role="PasajerosPorPedidoTraslado">
+              <PropertyRef Name="IDPedidoTraslado" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PedidosTraslado_Usuarios">
+          <End Type="ACHE.Model.Usuarios" Role="Usuarios" Multiplicity="1" />
+          <End Type="ACHE.Model.PedidosTraslado" Role="PedidosTraslado" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuarios">
+              <PropertyRef Name="IDUsuario" />
+            </Principal>
+            <Dependent Role="PedidosTraslado">
+              <PropertyRef Name="IDUsuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Servicios">
+          <Key>
+            <PropertyRef Name="IDServicio" />
+          </Key>
+          <Property Name="IDServicio" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IDProveedor" Type="Int32" Nullable="false" />
+          <Property Name="Nombre" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="PrecioRegular" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+          <Property Name="PrecioPrivado" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+          <Property Name="ObservacionesRegular" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="ObservacionesPrivado" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Activo" Type="Boolean" Nullable="false" />
+          <Property Name="EsPrivado" Type="Boolean" Nullable="false" />
+          <Property Name="MaxPasajeros" Type="Int32" Nullable="false" />
+          <Property Name="PrecioRegularNoRepresentado" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+          <Property Name="PrecioPrivadoNoRepresentado" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+          <Property Name="IDSubTipo" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="PedidosTraslado" Relationship="ACHE.Model.FK_PedidosTraslado_Servicios" FromRole="Servicios" ToRole="PedidosTraslado" />
+          <NavigationProperty Name="Proveedores" Relationship="ACHE.Model.FK__Servicios__IDPro__30F848ED" FromRole="Servicios" ToRole="Proveedores" />
+          <NavigationProperty Name="SubTipos" Relationship="ACHE.Model.FK_Servicios_SubTipos" FromRole="Servicios" ToRole="SubTipos" />
+          <NavigationProperty Name="PreciosServicios" Relationship="ACHE.Model.FK__PreciosSe__IDSer__6FE99F9F" FromRole="Servicios" ToRole="PreciosServicios" />
+          <Property Name="ServicioEspecial" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_PedidosTraslado_Servicios">
+          <End Type="ACHE.Model.Servicios" Role="Servicios" Multiplicity="1" />
+          <End Type="ACHE.Model.PedidosTraslado" Role="PedidosTraslado" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Servicios">
+              <PropertyRef Name="IDServicio" />
+            </Principal>
+            <Dependent Role="PedidosTraslado">
+              <PropertyRef Name="IDServicio" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Servicios__IDPro__30F848ED">
+          <End Type="ACHE.Model.Proveedores" Role="Proveedores" Multiplicity="1" />
+          <End Type="ACHE.Model.Servicios" Role="Servicios" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Proveedores">
+              <PropertyRef Name="IDProveedor" />
+            </Principal>
+            <Dependent Role="Servicios">
+              <PropertyRef Name="IDProveedor" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Servicios_SubTipos">
+          <End Type="ACHE.Model.SubTipos" Role="SubTipos" Multiplicity="1" />
+          <End Type="ACHE.Model.Servicios" Role="Servicios" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SubTipos">
+              <PropertyRef Name="IDSubTipo" />
+            </Principal>
+            <Dependent Role="Servicios">
+              <PropertyRef Name="IDSubTipo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="PreciosProductos">
+          <Key>
+            <PropertyRef Name="IDPrecioProducto" />
+          </Key>
+          <Property Name="IDPrecioProducto" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IDProducto" Type="Int32" Nullable="false" />
+          <Property Name="FechaDesde" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="FechaHasta" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="PrecioOperador" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+          <Property Name="PrecioRestaurante" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+          <NavigationProperty Name="Productos" Relationship="ACHE.Model.FK__PreciosPr__IDPro__5CD6CB2B" FromRole="PreciosProductos" ToRole="Productos" />
+        </EntityType>
+        <Association Name="FK__PreciosPr__IDPro__5CD6CB2B">
+          <End Type="ACHE.Model.Productos" Role="Productos" Multiplicity="1" />
+          <End Type="ACHE.Model.PreciosProductos" Role="PreciosProductos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Productos">
+              <PropertyRef Name="IDProducto" />
+            </Principal>
+            <Dependent Role="PreciosProductos">
+              <PropertyRef Name="IDProducto" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="PreciosServicios">
+          <Key>
+            <PropertyRef Name="IDPrecioServicio" />
+          </Key>
+          <Property Name="IDPrecioServicio" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IDServicio" Type="Int32" />
+          <Property Name="FechaDesde" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="FechaHasta" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="PrecioRegular" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+          <Property Name="PrecioPrivado" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+          <Property Name="ObservacionesRegular" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="ObservacionesPrivado" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Servicios" Relationship="ACHE.Model.FK__PreciosSe__IDSer__6FE99F9F" FromRole="PreciosServicios" ToRole="Servicios" />
+          <Property Name="IDUsuario" Type="Int32" />
+          <NavigationProperty Name="Usuarios" Relationship="ACHE.Model.FK__PreciosSe__IDUsu__02FC7413" FromRole="PreciosServicios" ToRole="Usuarios" />
+        </EntityType>
+        <Association Name="FK__PreciosSe__IDSer__6FE99F9F">
+          <End Type="ACHE.Model.Servicios" Role="Servicios" Multiplicity="0..1" />
+          <End Type="ACHE.Model.PreciosServicios" Role="PreciosServicios" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Servicios">
+              <PropertyRef Name="IDServicio" />
+            </Principal>
+            <Dependent Role="PreciosServicios">
+              <PropertyRef Name="IDServicio" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__PreciosSe__IDUsu__02FC7413">
+          <End Type="ACHE.Model.Usuarios" Role="Usuarios" Multiplicity="0..1" />
+          <End Type="ACHE.Model.PreciosServicios" Role="PreciosServicios" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuarios">
+              <PropertyRef Name="IDUsuario" />
+            </Principal>
+            <Dependent Role="PreciosServicios">
+              <PropertyRef Name="IDUsuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ACHEModelStoreContainer" CdmEntityContainer="ACHEEntities">
+          <EntitySetMapping Name="LugaresTraslados">
+            <EntityTypeMapping TypeName="ACHE.Model.LugaresTraslados">
+              <MappingFragment StoreEntitySet="LugaresTraslados">
+                <ScalarProperty Name="Activo" ColumnName="Activo" />
+                <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="IDProveedor" ColumnName="IDProveedor" />
+                <ScalarProperty Name="IDLugarTraslado" ColumnName="IDLugarTraslado" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Menues">
+            <EntityTypeMapping TypeName="ACHE.Model.Menues">
+              <MappingFragment StoreEntitySet="Menues">
+                <ScalarProperty Name="ImagenMenu" ColumnName="ImagenMenu" />
+                <ScalarProperty Name="Imagen" ColumnName="Imagen" />
+                <ScalarProperty Name="IncluyeBebida" ColumnName="IncluyeBebida" />
+                <ScalarProperty Name="Postre" ColumnName="Postre" />
+                <ScalarProperty Name="PlatoPrincipal" ColumnName="PlatoPrincipal" />
+                <ScalarProperty Name="Entrada" ColumnName="Entrada" />
+                <ScalarProperty Name="TipoMenu" ColumnName="TipoMenu" />
+                <ScalarProperty Name="IDRestaurant" ColumnName="IDRestaurant" />
+                <ScalarProperty Name="IDMenu" ColumnName="IDMenu" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Pedidos">
+            <EntityTypeMapping TypeName="ACHE.Model.Pedidos">
+              <MappingFragment StoreEntitySet="Pedidos">
+                <ScalarProperty Name="PagoPor" ColumnName="PagoPor" />
+                <ScalarProperty Name="NroDocumento" ColumnName="NroDocumento" />
+                <ScalarProperty Name="EmailEnvio" ColumnName="EmailEnvio" />
+                <ScalarProperty Name="Pasajero" ColumnName="Pasajero" />
+                <ScalarProperty Name="FechaEstadiaHasta" ColumnName="FechaEstadiaHasta" />
+                <ScalarProperty Name="FechaEstadiaDesde" ColumnName="FechaEstadiaDesde" />
+                <ScalarProperty Name="Total" ColumnName="Total" />
+                <ScalarProperty Name="IDUsuario" ColumnName="IDUsuario" />
+                <ScalarProperty Name="FechaAlta" ColumnName="FechaAlta" />
+                <ScalarProperty Name="IDPedido" ColumnName="IDPedido" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PedidosDetalle">
+            <EntityTypeMapping TypeName="ACHE.Model.PedidosDetalle">
+              <MappingFragment StoreEntitySet="PedidosDetalle">
+                <ScalarProperty Name="DigitoVerficador" ColumnName="DigitoVerficador" />
+                <ScalarProperty Name="CantPasajeros" ColumnName="CantPasajeros" />
+                <ScalarProperty Name="CantCenas" ColumnName="CantCenas" />
+                <ScalarProperty Name="IDRestauranteValidacion" ColumnName="IDRestauranteValidacion" />
+                <ScalarProperty Name="FechaValidacion" ColumnName="FechaValidacion" />
+                <ScalarProperty Name="Validado" ColumnName="Validado" />
+                <ScalarProperty Name="PrecioOperador" ColumnName="PrecioOperador" />
+                <ScalarProperty Name="Precio" ColumnName="Precio" />
+                <ScalarProperty Name="IDProducto" ColumnName="IDProducto" />
+                <ScalarProperty Name="IDPedido" ColumnName="IDPedido" />
+                <ScalarProperty Name="IDDetalle" ColumnName="IDDetalle" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Proveedores">
+            <EntityTypeMapping TypeName="ACHE.Model.Proveedores">
+              <MappingFragment StoreEntitySet="Proveedores">
+                <ScalarProperty Name="Activo" ColumnName="Activo" />
+                <ScalarProperty Name="Observaciones" ColumnName="Observaciones" />
+                <ScalarProperty Name="Logo" ColumnName="Logo" />
+                <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="IDProveedor" ColumnName="IDProveedor" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Restaurantes">
+            <EntityTypeMapping TypeName="ACHE.Model.Restaurantes">
+              <MappingFragment StoreEntitySet="Restaurantes">
+                <ScalarProperty Name="ImagenMapa" ColumnName="ImagenMapa" />
+                <ScalarProperty Name="Imagen3" ColumnName="Imagen3" />
+                <ScalarProperty Name="Imagen2" ColumnName="Imagen2" />
+                <ScalarProperty Name="Imagen1" ColumnName="Imagen1" />
+                <ScalarProperty Name="Logo" ColumnName="Logo" />
+                <ScalarProperty Name="Observaciones" ColumnName="Observaciones" />
+                <ScalarProperty Name="FechaAlta" ColumnName="FechaAlta" />
+                <ScalarProperty Name="Activo" ColumnName="Activo" />
+                <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+                <ScalarProperty Name="HorarioAtencion" ColumnName="HorarioAtencion" />
+                <ScalarProperty Name="Ciudad" ColumnName="Ciudad" />
+                <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+                <ScalarProperty Name="Pwd" ColumnName="Pwd" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="IDRestaurant" ColumnName="IDRestaurant" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Usuarios">
+            <EntityTypeMapping TypeName="ACHE.Model.Usuarios">
+              <MappingFragment StoreEntitySet="Usuarios">
+                <ScalarProperty Name="ServiciosEspeciales" ColumnName="ServiciosEspeciales" />
+                <ScalarProperty Name="PagoPorHabilitado" ColumnName="PagoPorHabilitado" />
+                <ScalarProperty Name="Observaciones" ColumnName="Observaciones" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="FechaAlta" ColumnName="FechaAlta" />
+                <ScalarProperty Name="Activo" ColumnName="Activo" />
+                <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+                <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+                <ScalarProperty Name="Contacto" ColumnName="Contacto" />
+                <ScalarProperty Name="Empresa" ColumnName="Empresa" />
+                <ScalarProperty Name="Pwd" ColumnName="Pwd" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="TipoUsuario" ColumnName="TipoUsuario" />
+                <ScalarProperty Name="IDUsuario" ColumnName="IDUsuario" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UsuariosAdmin">
+            <EntityTypeMapping TypeName="ACHE.Model.UsuariosAdmin">
+              <MappingFragment StoreEntitySet="UsuariosAdmin">
+                <ScalarProperty Name="Activo" ColumnName="Activo" />
+                <ScalarProperty Name="Pwd" ColumnName="Pwd" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+                <ScalarProperty Name="IDUsuario" ColumnName="IDUsuario" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Parametros">
+            <EntityTypeMapping TypeName="ACHE.Model.Parametros">
+              <MappingFragment StoreEntitySet="Parametros">
+                <ScalarProperty Name="AdicionalNocturno" ColumnName="AdicionalNocturno" />
+                <ScalarProperty Name="TextoTraslados" ColumnName="TextoTraslados" />
+                <ScalarProperty Name="TextoBeneficios" ColumnName="TextoBeneficios" />
+                <ScalarProperty Name="IDParametro" ColumnName="IDParametro" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Productos">
+            <EntityTypeMapping TypeName="ACHE.Model.Productos">
+              <MappingFragment StoreEntitySet="Productos">
+                <ScalarProperty Name="PrecioOperadorProxTemp" ColumnName="PrecioOperadorProxTemp" />
+                <ScalarProperty Name="PrecioProxTemp" ColumnName="PrecioProxTemp" />
+                <ScalarProperty Name="PrecioOperador" ColumnName="PrecioOperador" />
+                <ScalarProperty Name="FechaAlta" ColumnName="FechaAlta" />
+                <ScalarProperty Name="Precio" ColumnName="Precio" />
+                <ScalarProperty Name="Activo" ColumnName="Activo" />
+                <ScalarProperty Name="IncluyeBebida" ColumnName="IncluyeBebida" />
+                <ScalarProperty Name="Postre" ColumnName="Postre" />
+                <ScalarProperty Name="PlatoPrincipal" ColumnName="PlatoPrincipal" />
+                <ScalarProperty Name="Entrada" ColumnName="Entrada" />
+                <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+                <ScalarProperty Name="IDProducto" ColumnName="IDProducto" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PasajerosPorPedidoTraslado">
+            <EntityTypeMapping TypeName="ACHE.Model.PasajerosPorPedidoTraslado">
+              <MappingFragment StoreEntitySet="PasajerosPorPedidoTraslado">
+                <ScalarProperty Name="DNI" ColumnName="DNI" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="IDPedidoTraslado" ColumnName="IDPedidoTraslado" />
+                <ScalarProperty Name="IDPasajerosPorPedidoTraslado" ColumnName="IDPasajerosPorPedidoTraslado" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SubTipos">
+            <EntityTypeMapping TypeName="ACHE.Model.SubTipos">
+              <MappingFragment StoreEntitySet="SubTipos">
+                <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+                <ScalarProperty Name="Lugar3" ColumnName="Lugar3" />
+                <ScalarProperty Name="Lugar2" ColumnName="Lugar2" />
+                <ScalarProperty Name="Lugar1" ColumnName="Lugar1" />
+                <ScalarProperty Name="IDSubTipo" ColumnName="IDSubTipo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PedidosTraslado">
+            <EntityTypeMapping TypeName="ACHE.Model.PedidosTraslado">
+              <MappingFragment StoreEntitySet="PedidosTraslado">
+                <ScalarProperty Name="NroFile" ColumnName="NroFile" />
+                <ScalarProperty Name="DireccionHotel4" ColumnName="DireccionHotel4" />
+                <ScalarProperty Name="Hotel4" ColumnName="Hotel4" />
+                <ScalarProperty Name="Hotel3" ColumnName="Hotel3" />
+                <ScalarProperty Name="Hotel2" ColumnName="Hotel2" />
+                <ScalarProperty Name="Hotel1" ColumnName="Hotel1" />
+                <ScalarProperty Name="DireccionHotel3" ColumnName="DireccionHotel3" />
+                <ScalarProperty Name="DireccionHotel2" ColumnName="DireccionHotel2" />
+                <ScalarProperty Name="DireccionHotel1" ColumnName="DireccionHotel1" />
+                <ScalarProperty Name="Precio" ColumnName="Precio" />
+                <ScalarProperty Name="IDLugarDestino" ColumnName="IDLugarDestino" />
+                <ScalarProperty Name="IDLugarOrigen" ColumnName="IDLugarOrigen" />
+                <ScalarProperty Name="IDServicio" ColumnName="IDServicio" />
+                <ScalarProperty Name="IDUsuario" ColumnName="IDUsuario" />
+                <ScalarProperty Name="Observaciones" ColumnName="Observaciones" />
+                <ScalarProperty Name="PagoPor" ColumnName="PagoPor" />
+                <ScalarProperty Name="EmailEnvio" ColumnName="EmailEnvio" />
+                <ScalarProperty Name="HoraPartida" ColumnName="HoraPartida" />
+                <ScalarProperty Name="VueloPartida" ColumnName="VueloPartida" />
+                <ScalarProperty Name="AerolineaPartida" ColumnName="AerolineaPartida" />
+                <ScalarProperty Name="HoraArribo" ColumnName="HoraArribo" />
+                <ScalarProperty Name="VueloArribo" ColumnName="VueloArribo" />
+                <ScalarProperty Name="AerolineaArribo" ColumnName="AerolineaArribo" />
+                <ScalarProperty Name="FechaAlta" ColumnName="FechaAlta" />
+                <ScalarProperty Name="Total" ColumnName="Total" />
+                <ScalarProperty Name="TipoServicio" ColumnName="TipoServicio" />
+                <ScalarProperty Name="FechaVuelta" ColumnName="FechaVuelta" />
+                <ScalarProperty Name="FechaIda" ColumnName="FechaIda" />
+                <ScalarProperty Name="CantMenoresGratis" ColumnName="CantMenoresGratis" />
+                <ScalarProperty Name="CantMenoresAsiento" ColumnName="CantMenoresAsiento" />
+                <ScalarProperty Name="CantAdultos" ColumnName="CantAdultos" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="IDPedidoTraslado" ColumnName="IDPedidoTraslado" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Servicios">
+            <EntityTypeMapping TypeName="ACHE.Model.Servicios">
+              <MappingFragment StoreEntitySet="Servicios">
+                <ScalarProperty Name="ServicioEspecial" ColumnName="ServicioEspecial" />
+                <ScalarProperty Name="IDSubTipo" ColumnName="IDSubTipo" />
+                <ScalarProperty Name="PrecioPrivadoNoRepresentado" ColumnName="PrecioPrivadoNoRepresentado" />
+                <ScalarProperty Name="PrecioRegularNoRepresentado" ColumnName="PrecioRegularNoRepresentado" />
+                <ScalarProperty Name="Activo" ColumnName="Activo" />
+                <ScalarProperty Name="EsPrivado" ColumnName="EsPrivado" />
+                <ScalarProperty Name="MaxPasajeros" ColumnName="MaxPasajeros" />
+                <ScalarProperty Name="ObservacionesPrivado" ColumnName="ObservacionesPrivado" />
+                <ScalarProperty Name="ObservacionesRegular" ColumnName="ObservacionesRegular" />
+                <ScalarProperty Name="PrecioPrivado" ColumnName="PrecioPrivado" />
+                <ScalarProperty Name="PrecioRegular" ColumnName="PrecioRegular" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="IDProveedor" ColumnName="IDProveedor" />
+                <ScalarProperty Name="IDServicio" ColumnName="IDServicio" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PreciosProductos">
+            <EntityTypeMapping TypeName="ACHE.Model.PreciosProductos">
+              <MappingFragment StoreEntitySet="PreciosProductos">
+                <ScalarProperty Name="PrecioRestaurante" ColumnName="PrecioRestaurante" />
+                <ScalarProperty Name="PrecioOperador" ColumnName="PrecioOperador" />
+                <ScalarProperty Name="FechaHasta" ColumnName="FechaHasta" />
+                <ScalarProperty Name="FechaDesde" ColumnName="FechaDesde" />
+                <ScalarProperty Name="IDProducto" ColumnName="IDProducto" />
+                <ScalarProperty Name="IDPrecioProducto" ColumnName="IDPrecioProducto" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PreciosServicios">
+            <EntityTypeMapping TypeName="ACHE.Model.PreciosServicios">
+              <MappingFragment StoreEntitySet="PreciosServicios">
+                <ScalarProperty Name="IDUsuario" ColumnName="IDUsuario" />
+                <ScalarProperty Name="ObservacionesPrivado" ColumnName="ObservacionesPrivado" />
+                <ScalarProperty Name="ObservacionesRegular" ColumnName="ObservacionesRegular" />
+                <ScalarProperty Name="PrecioPrivado" ColumnName="PrecioPrivado" />
+                <ScalarProperty Name="PrecioRegular" ColumnName="PrecioRegular" />
+                <ScalarProperty Name="FechaHasta" ColumnName="FechaHasta" />
+                <ScalarProperty Name="FechaDesde" ColumnName="FechaDesde" />
+                <ScalarProperty Name="IDServicio" ColumnName="IDServicio" />
+                <ScalarProperty Name="IDPrecioServicio" ColumnName="IDPrecioServicio" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+        <DesignerProperty Name="UseLegacyProvider" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

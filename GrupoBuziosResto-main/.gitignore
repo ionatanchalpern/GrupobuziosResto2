@@ -1,0 +1,15 @@
+.vs/
+.nuget/
+packages/
+ACHE.Extensions/bin/
+ACHE.Extensions/obj/
+ACHE.Model/bin/
+ACHE.Model/obj/
+ACHE.Web/bin/
+ACHE.Web/obj/
+*.jpg
+*.gif
+*.png
+*.svg
+*.pdf
+.vs/

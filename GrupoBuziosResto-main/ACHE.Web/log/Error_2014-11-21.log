@@ -1,0 +1,81 @@
+Fecha: 21/11/2014 12:42:58 
+Error: Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.
+Detalle: System.Data.Entity.Validation.DbEntityValidationException: Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.
+   en System.Data.Entity.Internal.InternalContext.SaveChanges()
+   en System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   en System.Data.Entity.DbContext.SaveChanges()
+   en admin_modulos_custom_productose.CreateEntity() en c:\ACHE\Clientes\Dinamica\GrupoBuziosResto\Site\Code\ACHE.Web\admin\modulos\custom\productose.aspx.cs:línea 123
+   en admin_modulos_custom_productose.Process() en c:\ACHE\Clientes\Dinamica\GrupoBuziosResto\Site\Code\ACHE.Web\admin\modulos\custom\productose.aspx.cs:línea 65
+^^-------------------------------------------------------------------^^
+Fecha: 21/11/2014 12:43:45 
+Error: Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.
+Detalle: System.Data.Entity.Validation.DbEntityValidationException: Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.
+   en System.Data.Entity.Internal.InternalContext.SaveChanges()
+   en System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   en System.Data.Entity.DbContext.SaveChanges()
+   en admin_modulos_custom_productose.CreateEntity() en c:\ACHE\Clientes\Dinamica\GrupoBuziosResto\Site\Code\ACHE.Web\admin\modulos\custom\productose.aspx.cs:línea 123
+   en admin_modulos_custom_productose.Process() en c:\ACHE\Clientes\Dinamica\GrupoBuziosResto\Site\Code\ACHE.Web\admin\modulos\custom\productose.aspx.cs:línea 65
+^^-------------------------------------------------------------------^^
+Fecha: 21/11/2014 12:45:58 
+Error: La cadena de entrada no tiene el formato correcto.
+Detalle: System.FormatException: La cadena de entrada no tiene el formato correcto.
+   en System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   en System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   en System.Int32.Parse(String s)
+   en admin_modulos_custom_productose.CreateEntity() en c:\ACHE\Clientes\Dinamica\GrupoBuziosResto\Site\Code\ACHE.Web\admin\modulos\custom\productose.aspx.cs:línea 114
+   en admin_modulos_custom_productose.Process() en c:\ACHE\Clientes\Dinamica\GrupoBuziosResto\Site\Code\ACHE.Web\admin\modulos\custom\productose.aspx.cs:línea 65
+^^-------------------------------------------------------------------^^
+Fecha: 21/11/2014 12:46:07 
+Error: La cadena de entrada no tiene el formato correcto.
+Detalle: System.FormatException: La cadena de entrada no tiene el formato correcto.
+   en System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   en System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   en System.Int32.Parse(String s)
+   en admin_modulos_custom_productose.CreateEntity() en c:\ACHE\Clientes\Dinamica\GrupoBuziosResto\Site\Code\ACHE.Web\admin\modulos\custom\productose.aspx.cs:línea 114
+   en admin_modulos_custom_productose.Process() en c:\ACHE\Clientes\Dinamica\GrupoBuziosResto\Site\Code\ACHE.Web\admin\modulos\custom\productose.aspx.cs:línea 65
+^^-------------------------------------------------------------------^^
+Fecha: 21/11/2014 12:46:19 
+Error: La cadena de entrada no tiene el formato correcto.
+Detalle: System.FormatException: La cadena de entrada no tiene el formato correcto.
+   en System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   en System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   en System.Int32.Parse(String s)
+   en admin_modulos_custom_productose.CreateEntity() en c:\ACHE\Clientes\Dinamica\GrupoBuziosResto\Site\Code\ACHE.Web\admin\modulos\custom\productose.aspx.cs:línea 114
+   en admin_modulos_custom_productose.Process() en c:\ACHE\Clientes\Dinamica\GrupoBuziosResto\Site\Code\ACHE.Web\admin\modulos\custom\productose.aspx.cs:línea 65
+^^-------------------------------------------------------------------^^
+Fecha: 21/11/2014 12:48:02 
+Error: La cadena de entrada no tiene el formato correcto.
+Detalle: System.FormatException: La cadena de entrada no tiene el formato correcto.
+   en System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   en System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   en System.Int32.Parse(String s)
+   en admin_modulos_custom_productose.CreateEntity() en c:\ACHE\Clientes\Dinamica\GrupoBuziosResto\Site\Code\ACHE.Web\admin\modulos\custom\productose.aspx.cs:línea 114
+   en admin_modulos_custom_productose.Process() en c:\ACHE\Clientes\Dinamica\GrupoBuziosResto\Site\Code\ACHE.Web\admin\modulos\custom\productose.aspx.cs:línea 65
+^^-------------------------------------------------------------------^^
+Fecha: 21/11/2014 12:48:57 
+Error: La cadena de entrada no tiene el formato correcto.
+Detalle: System.FormatException: La cadena de entrada no tiene el formato correcto.
+   en System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   en System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   en System.Int32.Parse(String s)
+   en admin_modulos_custom_productose.CreateEntity() en c:\ACHE\Clientes\Dinamica\GrupoBuziosResto\Site\Code\ACHE.Web\admin\modulos\custom\productose.aspx.cs:línea 114
+   en admin_modulos_custom_productose.Process() en c:\ACHE\Clientes\Dinamica\GrupoBuziosResto\Site\Code\ACHE.Web\admin\modulos\custom\productose.aspx.cs:línea 65
+^^-------------------------------------------------------------------^^
+Fecha: 21/11/2014 12:49:21 
+Error: La cadena de entrada no tiene el formato correcto.
+Detalle: System.FormatException: La cadena de entrada no tiene el formato correcto.
+   en System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   en System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   en System.Int32.Parse(String s)
+   en admin_modulos_custom_productose.CreateEntity() en c:\ACHE\Clientes\Dinamica\GrupoBuziosResto\Site\Code\ACHE.Web\admin\modulos\custom\productose.aspx.cs:línea 114
+   en admin_modulos_custom_productose.Process() en c:\ACHE\Clientes\Dinamica\GrupoBuziosResto\Site\Code\ACHE.Web\admin\modulos\custom\productose.aspx.cs:línea 65
+^^-------------------------------------------------------------------^^
+Fecha: 21/11/2014 12:49:34 
+Error: La cadena de entrada no tiene el formato correcto.
+Detalle: System.FormatException: La cadena de entrada no tiene el formato correcto.
+   en System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   en System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   en System.Int32.Parse(String s)
+   en admin_modulos_custom_productose.CreateEntity() en c:\ACHE\Clientes\Dinamica\GrupoBuziosResto\Site\Code\ACHE.Web\admin\modulos\custom\productose.aspx.cs:línea 114
+   en admin_modulos_custom_productose.Process() en c:\ACHE\Clientes\Dinamica\GrupoBuziosResto\Site\Code\ACHE.Web\admin\modulos\custom\productose.aspx.cs:línea 65
+^^-------------------------------------------------------------------^^

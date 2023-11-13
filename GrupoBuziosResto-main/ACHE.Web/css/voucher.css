@@ -1,0 +1,350 @@
+html{ height: 100%; }
+
+body { height: 100%; }
+
+p {
+
+	font: normal bold 13px arial narrow;
+	margin: 0;
+
+}
+
+h3 {margin:0;font: normal bold 15px arial narrow;}
+
+#content {
+	
+	min-height: 100%;
+	width: 820px;
+	height: 100%;
+	display: table;
+
+}
+
+.cupon {
+
+	width: 495px;
+	height: 230px;
+	float: left;
+	margin: 5px 0 0 13px;
+	display: table-row;
+}
+
+.cupondos {
+
+	width: 495px;
+	height: 230px;
+	float: left;
+	margin: 5px 0 0 13px;
+
+}
+
+.datos {
+
+	width: 300px;
+	height: 230px;
+	background: rgb(213, 213, 213);
+	float: left;
+	margin: 5px 0 0 0;
+	display: table-row;
+
+}
+
+.datosdos{
+	width: 300px;
+	height: 230px;
+	background: rgb(213, 213, 213);
+	float: left;
+	margin: 5px 0 0 0;
+
+}
+
+.logo {
+
+	width: 150px;
+	height: 150px;
+	float:left;
+
+}
+
+.logobuzios {padding: 24px 4px;}
+
+.cont {
+
+	width: 493px;
+	height: 200px;
+
+}
+
+
+.pie {
+
+	width: 495px;
+	height: 25px;
+	background: #222;
+	margin: 5px 0 0 0;
+
+}
+
+.datoshead {
+
+	width: 300px;
+	height: 20px;
+	background: #222;
+	
+}
+
+.separador {display:block;}
+
+.info {
+
+	font: normal normal 12px arial narrow;
+	padding: 2px 0 5px 0;
+}
+
+
+.turista {
+
+	font: normal bold 11px arial narrow;
+	padding: 3px 0;
+
+}
+
+
+
+.buffetlibre {
+
+	font: normal bold 11px arial narrow;
+	padding: 3px 0;
+
+}
+
+.restaurant {
+
+	font: normal normal 10px arial narrow;
+	padding: 4px 10px;
+
+}
+
+.asociados {
+
+	font: normal normal 14px arial narrow;
+	color: #fff;
+	float: left;
+	padding: 3px 0 0 10px;
+
+}
+
+.cubiertos {
+
+	width: 14px;
+	margin: 2px 7px; 
+	float: left;
+	
+}
+
+.web {
+
+	font: normal normal 14px arial narrow;
+	color: #fff;
+	float: left;
+	margin: 0;
+	padding: 3px 5px 0 0;
+}
+
+.datosutiles {
+	
+	font: normal bold 12px arial narrow;
+	color: #fff;
+	line-height: 20px;
+	margin: 0 0 0 5px;
+
+}
+
+.utiles {
+
+	font: normal normal 9px arial narrow;
+	padding: 3px 5px;
+	color: #000;
+}
+
+/*****IE*****/
+	.utiles {
+	
+		font-size: 9px\9; /* IE 8 and below */
+		
+	}
+		
+	.restaurant {
+
+	font-size: 9px\9; /* IE 8 and below */
+	padding: 2px 10px\9;/* IE 8 and below */
+
+	}
+	
+	.logobuzios {padding: 32px 4px\9; /* IE 8 and below */}
+	
+	@media print {
+
+		body, #content {height: 100%\9; min-height: 100%\9;}
+		
+		#content {display: block\9; height: 100%\9, min-height: 100%\9;}
+		
+		.datos, .cupon { margin-top: 45px\9; } /***25px original***/
+		
+		@page { margin: 0\9; }
+		
+		.corte { overflow: visible\9; }
+		
+	}
+	
+/******FIREFOX*******/
+
+@-moz-document url-prefix() {
+
+	#content {
+	
+		width: 820px;
+		display: block;
+
+	}
+	
+	.cupon {
+
+		width: 495px;
+		height: 230px;
+		float: left;
+		margin: 5px 0 0 13px;
+		display: block;
+	}
+
+	.datos {
+
+		width: 300px;
+		height: 230px;
+		background: rgb(213, 213, 213);
+		float: left;
+		margin: 5px 0 0 0;
+		display: block;
+
+	}
+	
+    .utiles {
+		font: normal normal 9px arial narrow;
+		padding: 3px 5px;
+		color: #000;
+    }
+	
+	.restaurant {
+
+		font: normal normal 2.3mm arial narrow;
+		padding: 2px 10px;
+
+	}
+	
+	.asociados {
+
+		font: normal normal 12px arial narrow;
+		color: #fff;
+		float: left;
+		padding: 3px 0 0 10px;
+
+	}
+	
+	.cubiertos {
+
+		width: 14px;
+		margin: 2px 20px; 
+		float: left;
+	
+	}
+	
+	.web {
+
+		font: normal normal 14px arial narrow;
+		color: #fff;
+		float: left;
+		margin: 0;
+		padding: 2px 5px 0 0;
+	}
+	
+	.corte {
+
+		z-index: -1; 
+		position:absolute;
+		left: 0;
+		margin: 0 0 0 8px;
+	
+	}
+	
+	.logobuzios {padding: 32px 4px;}
+	
+	@media print {
+	
+		html, body {
+		   min-height: 100%;
+		   height: 100%;
+		}
+		
+		#content { height: 100%; }
+		
+		.datos, .cupon { margin-top: 37px; } /***25px original***/
+		
+		@page { margin: 0; }
+		
+	}
+
+}
+
+/*****SAFARI*****/
+
+@media screen and (-webkit-min-device-pixel-ratio:0) { 
+	
+    ::i-block-chrome,.utiles {
+
+		font: normal normal 9px arial narrow;
+		padding: 3px 5px;
+		color: #000;
+
+    }
+	
+	::i-block-chrome,.restaurant {
+		font: normal normal 2.3mm arial narrow;
+		padding: 2px 10px;
+	}
+}
+
+.corte {
+
+	z-index: -1; 
+	position:absolute;
+	left:0; /* IE 8 and below */
+	margin: 2px 0 0 8px; /* IE 8 and below */
+	
+}
+
+.kids {display: inline;}
+
+.kidss {display: inline; font: normal normal 12px arial narrow;margin: 0 0 0 5px;}
+
+@media print {
+
+	@page {
+	
+		margin: 1,1cm;
+    }
+
+	body {
+	
+		-moz-margin-start: 1,1;
+		-moz-transform: scale(70%);
+		-webkit-print-color-adjust:exact;
+	
+	}
+
+    div.cont{
+	
+        page-break-inside: avoid;
+		-webkit-column-break-inside: avoid; /* Chrome, Safari, Opera */
+        break-inside: avoid; /* IE 10+ */
+    }
+}

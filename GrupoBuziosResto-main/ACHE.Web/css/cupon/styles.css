@@ -1,0 +1,211 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* Coupons styles */
+body,
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  padding: 15px;
+}
+
+.coupon {
+  width: 715px;
+  height: 230px;
+  border: 2px dashed black;
+  overflow: hidden;
+  position: relative;
+}
+
+img.scissors {
+  position: absolute;
+  top: auto;
+  right: auto;
+  bottom: 1px;
+  left: 2px;
+}
+
+.logo {
+  width: 110px;
+  height: 165px;
+  background: transparent url(http://www.grupobuziosresto.com/css/cupon/imgs/logo.png) no-repeat center center;
+  background-size: 90% auto;
+  float: left;
+}
+
+.main-text {
+  width: 320px;
+  height: 165px;
+  float: left;
+  padding: 15px 5px 0 5px;
+}
+
+.main-text p,
+.secondary-text p,
+.tertiary-text p {
+  font-size: 10px;
+  font-weight: normal;
+  margin-bottom: 5px;
+}
+
+.main-text p strong,
+.secondary-text p strong,
+.tertiary-text p strong {
+  font-weight: bold;
+}
+
+.main-text p.number,
+.main-text p.menu-type {
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.main-text p.menu-type span {
+  font-size: 9px;
+  text-transform: initial;
+}
+
+.main-text p.validity {
+  padding-bottom: 5px;
+  border-bottom: 1px solid black;
+}
+
+.main-text p.menu-description strong {
+  text-decoration: underline;
+}
+
+.secondary-text {
+  width: 420px;
+  float: left;
+  padding: 5px 0;
+  border-top: 1px solid black;
+  margin-left: 5px;
+}
+
+.secondary-text p {
+  font-size: 8px;
+}
+
+h3.bottom-banner {
+  float: left;
+  background-color: black;
+  color: white;
+  padding: 5px;
+  font-size: 10.25px;
+  margin-left: 25px;
+  width: 400px;
+  margin-top: -5px;
+  font-weight: normal;
+  text-align: center;
+}
+
+h3.bottom-banner strong {
+  font-weight: bold;
+}
+
+.tertiary-text {
+  width: 285px;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: auto;
+  background-color: #D7D8DC;
+}
+
+.tertiary-text p {
+  font-size: 9.45px;
+  padding: 5px 2px 5px 5px;
+}
+
+.tertiary-text h3.title {
+  text-transform: uppercase;
+  font-weight: normal;
+  background-color: black;
+  color: white;
+  font-size: 10px;
+  padding: 4px;
+}
+
+.benefits {
+  width: 715px;
+  height: 380px;
+  overflow: hidden;
+  position: relative;
+  font-size: 12px;
+  line-height: 1.2;
+  padding: 10px 0;
+}
+
+.benefits strong {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.benefits .divider {
+  margin: 5px 0;
+  border-top: 1px dashed black;
+  height: 1px;
+}
+
+.benefits ul {
+  padding-left: 15px;
+  list-style-type: disc;
+}

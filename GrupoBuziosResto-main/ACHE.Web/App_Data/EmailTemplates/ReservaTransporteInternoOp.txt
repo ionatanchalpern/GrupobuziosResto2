@@ -1,0 +1,132 @@
+﻿<div style="width: 600px;font-family: arial,sans-serif;">
+    <hr />
+    Estimado/a <USUARIOOPERADOR>
+    <br />
+    Su reserva #<ID> ha sido confirmada. Gracias por confiar en <PROVEEDOR>
+    <br />
+    <br />
+    <div style="border: 1px solid black;">
+        <div style="padding: 10px;font-family: arial,sans-serif;">
+			<table style="width:100%">
+				<tr>
+					<td><img src='http://www.grupobuziosresto.com/files/logos/<LOGO>' style="max-width:200px" /></td>
+					<td><h3>DETALLES DEL SERVICIO</h3></td>
+					<td style="text-align:right">
+						<p>
+							Generado el d&iacute;a:
+						</p>
+						<p>
+							<FECHAGENERACION>
+						</p>
+					</td>
+				</tr>
+			</table>
+
+            <br />
+            <hr style="border: 2px solid #4b1534;"></hr>
+        </div>
+       <div style="padding: 10px;font-family: arial,sans-serif;">
+            <table>
+                <tbody>
+                    <tr>
+                        <td style="width: 800px;">
+                            <p>C&oacute;digo de la reserva: <ID></p>
+                            <p>Operador Resposable: <EMPRESA></p>
+                            <p>Operadora: <EMPRESA></p>
+                            <p>Usuario: <USUARIOOPERADOR></p>
+                            <p>Email: <EMAILOPERADOR></p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    
+
+
+	  <div style="padding: 10px;font-family: arial,sans-serif;">
+            <h3>TRASLADOS</h3>
+            <hr style="border: 2px solid #4b1534;" />
+            <br />
+            <p>Transportista: <PROVEEDOR></p>
+            <p>Servicio de Traslado: <SERVICIO></p>
+            <p>Tipo Traslado: <TIPOTRASLADO></p>
+            <p>Servicio: <TIPOSERVICIO></p>
+			<p><FECHAIDA></p>
+			<p><FECHAVUELTA></p>
+
+        </div>
+
+       <div style="padding: 10px;font-family: arial,sans-serif;">
+            <h3><TITULOIDA></h3>
+            <hr style="border: 2px solid #4b1534;" />
+            <br />
+            <table>
+                <tbody>
+                    <tr>
+                        <td style="width: 600px;vertical-align:top">
+                           <p><AEROPUERTOIDA></p>
+							<p><COMPANIAIDA></p>
+							<p><NROVUELOIDA></p>
+							<p><FECHAIDA></p>
+							<p><HORAIDA></p>
+							<p><HOTELIDA1></p>
+							<p><DIRECCIONIDA1></p>
+							<p><HOTELIDA2></p>
+							<p><DIRECCIONIDA2></p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div style="padding: 10px;font-family: arial,sans-serif;">
+           <h3><TIULOVUELTA></h3>
+            <hr style="border: 2px solid #4b1534;" />
+            <table>
+                <tbody>
+                    <tr>
+                        <td style="width: 300px;vertical-align:top">
+							<p><AEROPUERTOVUELTA></p>
+							<p><COMPANIAVUELTA></p>
+							<p><NROVUELOVUELTA></p>
+							<p><FECHAVUELTA></p>
+							<p><HORAVUELTA></p>
+				
+							<p><HOTELVUELTA1></p>
+							<p><DIRECCIONVUELTA1></p>
+							<p><HOTELVUELTA2></p>
+							<p><DIRECCIONVUELTA2></p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+		<div style="padding: 10px;font-family: arial,sans-serif;">
+            <hr style="border: 2px solid #4b1534;" />
+            <br />
+		    <p>N° de file: <NROFILE></p>
+		    <p>Observaciones: <OBSERVACIONES></p>
+			<p>Total: <TOTAL></p>
+        </div>
+
+        <div style="padding: 10px;font-family: arial,sans-serif;">
+            <h3>DATOS DEL PASAJERO</h3>
+            <hr style="border: 2px solid #4b1534;" />
+            <p>Cantidad de Adultos: <CANTADULTOS></p>
+            <p>Cantidad de Menores que ocupan Asiento: <CANTMENORES1></p>
+            <p>Cantidad de Menores gratis hasta 3 a&ntilde;os: <CANTMENORES2></p><br/>
+			<INFOPASAJEROS>
+            <br />
+        </div>
+
+    </div>
+</div>
+<div style="width: 600px; font-family: Calibri;">
+    <div style="border: 1px solid black;">
+        <div style="padding: 10px;">
+            <TEXTOTRASLADOS>
+        </div>
+        <div style="padding: 10px;">
+            <h3>INFORMACI&Oacute;N IMPORTANTE, POR FAVOR LEER AQUI ABAJO:</h3>
+        </div>
+    </div>
+</div>

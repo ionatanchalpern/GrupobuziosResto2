@@ -1,0 +1,49 @@
+Fecha: 14/11/2019 16:44:52 
+Error: No se puede reconocer la cadena como valor DateTime válido.
+Detalle: System.FormatException: No se puede reconocer la cadena como valor DateTime válido.
+   en System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   en System.DateTime.Parse(String s)
+   en carrito.CrearPedido(Int32 id, String pasajero, String dni, String estadiaDesde, String estadiaHasta, String pagoPor) en c:\Users\Kevin\Documents\_LOCAL\grupobuziosresto\ACHE.Web\carrito.aspx.cs:línea 141
+^^-------------------------------------------------------------------^^
+Fecha: 14/11/2019 16:45:24 
+Error: No se puede reconocer la cadena como valor DateTime válido.
+Detalle: System.FormatException: No se puede reconocer la cadena como valor DateTime válido.
+   en System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   en System.DateTime.Parse(String s)
+   en carrito.CrearPedido(Int32 id, String pasajero, String dni, String estadiaDesde, String estadiaHasta, String pagoPor) en c:\Users\Kevin\Documents\_LOCAL\grupobuziosresto\ACHE.Web\carrito.aspx.cs:línea 141
+^^-------------------------------------------------------------------^^
+Fecha: 14/11/2019 16:46:15 
+Error: No se puede reconocer la cadena como valor DateTime válido.
+Detalle: System.FormatException: No se puede reconocer la cadena como valor DateTime válido.
+   en System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   en System.DateTime.Parse(String s)
+   en carrito.CrearPedido(Int32 id, String pasajero, String dni, String estadiaDesde, String estadiaHasta, String pagoPor) en c:\Users\Kevin\Documents\_LOCAL\grupobuziosresto\ACHE.Web\carrito.aspx.cs:línea 141
+^^-------------------------------------------------------------------^^
+Fecha: 14/11/2019 16:46:39 
+Error: No se puede reconocer la cadena como valor DateTime válido.
+Detalle: System.FormatException: No se puede reconocer la cadena como valor DateTime válido.
+   en System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   en System.DateTime.Parse(String s)
+   en carrito.CrearPedido(Int32 id, String pasajero, String dni, String estadiaDesde, String estadiaHasta, String pagoPor) en c:\Users\Kevin\Documents\_LOCAL\grupobuziosresto\ACHE.Web\carrito.aspx.cs:línea 141
+^^-------------------------------------------------------------------^^
+Fecha: 14/11/2019 16:46:49 
+Error: No se puede reconocer la cadena como valor DateTime válido.
+Detalle: System.FormatException: No se puede reconocer la cadena como valor DateTime válido.
+   en System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   en System.DateTime.Parse(String s)
+   en carrito.CrearPedido(Int32 id, String pasajero, String dni, String estadiaDesde, String estadiaHasta, String pagoPor) en c:\Users\Kevin\Documents\_LOCAL\grupobuziosresto\ACHE.Web\carrito.aspx.cs:línea 141
+^^-------------------------------------------------------------------^^
+Fecha: 14/11/2019 16:47:31 
+Error: No se puede reconocer la cadena como valor DateTime válido.
+Detalle: System.FormatException: No se puede reconocer la cadena como valor DateTime válido.
+   en System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   en System.DateTime.Parse(String s)
+   en carrito.CrearPedido(Int32 id, String pasajero, String dni, String estadiaDesde, String estadiaHasta, String pagoPor) en c:\Users\Kevin\Documents\_LOCAL\grupobuziosresto\ACHE.Web\carrito.aspx.cs:línea 141
+^^-------------------------------------------------------------------^^
+Fecha: 14/11/2019 16:47:52 
+Error: No se puede reconocer la cadena como valor DateTime válido.
+Detalle: System.FormatException: No se puede reconocer la cadena como valor DateTime válido.
+   en System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   en System.DateTime.Parse(String s)
+   en carrito.CrearPedido(Int32 id, String pasajero, String dni, String estadiaDesde, String estadiaHasta, String pagoPor) en c:\Users\Kevin\Documents\_LOCAL\grupobuziosresto\ACHE.Web\carrito.aspx.cs:línea 141
+^^-------------------------------------------------------------------^^

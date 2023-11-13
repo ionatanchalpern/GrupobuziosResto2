@@ -1,0 +1,70 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPageFront.master.cs" Inherits="MasterPageFront" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head runat="server">
+    <title>Grupo Buzios Restó</title>
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="shortcut icon" href="<%= ResolveUrl("~/imgs/favicon.ico") %>" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" />
+    <link href="<%= ResolveClientUrl("~/css/bootstrap.min.css") %>" rel="stylesheet" />
+    <link href="<%= ResolveClientUrl("~/css/style.css?v=2") %>" rel="stylesheet" />
+    <link href="<%= ResolveClientUrl("~/css/main.css?v=2") %>" rel="stylesheet" />
+    <link href="<%= ResolveClientUrl("~/css/traslados.css?v=1") %>" rel="stylesheet" />
+    <link href="<%= ResolveClientUrl("~/css/bootstrap-datetimepicker.min.css") %>" rel="stylesheet" />
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- Moment.js -->
+    <script type="text/javascript" src="<%= ResolveClientUrl("~/js/moment.min.js") %>"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script type="text/javascript" src="<%= ResolveClientUrl("~/js/bootstrap.min.js") %>"></script>
+    <!-- Bootstrap Date/Time picker -->
+    <%--<script type="text/javascript" src="/js/bootstrap-datetimepicker.min.js"></script>--%>
+    <script type="text/javascript" src="<%= ResolveClientUrl("~/js/common.js?v=1") %>"></script>
+    <script type="text/javascript" src="<%= ResolveClientUrl("~/js/vendor/jquery.numeric.js") %>"></script>
+
+    <!--[if lte IE 6]>
+            <style type="text/css">
+                img {border: none;}
+            </style>
+        <![endif]-->
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <asp:ContentPlaceHolder ID="head" runat="server" />
+</head>
+<body>
+    <form runat="server">
+        <UC:Header runat="server" ID="ucHeader" />
+        <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+        <UC:Footer runat="server" ID="ucFooter" />
+    </form>
+    <asp:ContentPlaceHolder ID="ScriptContent" runat="server" />
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".numeric").numeric();
+        });
+        setInterval(function () {
+            // Do something every 5 seconds
+            // 1. Make request to server
+            var url = document.domain;
+            $.post("http://" + url + "/keepSession.aspx");
+        }, 60000);
+    </script>
+    <!-- Lightbox -->
+    <script type="text/javascript" src="<%= ResolveClientUrl("~/js/lightbox.min.js") %>"></script>
+    <link href="<%= ResolveClientUrl("~/css/lightbox.css") %>" rel="stylesheet" />
+
+</body>
+</html>

@@ -1,0 +1,122 @@
+<%@ Master Language="C#" AutoEventWireup="true" Inherits="admin_Admin" CodeFile="Admin.master.cs" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>
+        <asp:ContentPlaceHolder ID="TitleContent" runat="server" />
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <asp:PlaceHolder runat="server" ID="plhHeader">
+        <link rel="shortcut icon" href="<%= ResolveUrl("~/imgs/favicon.ico") %>" />
+        <link rel="stylesheet" href="<%= ResolveClientUrl("~/admin/css/styles.css") %>" type="text/css" media="screen" />
+        <link rel="stylesheet" href="<%= ResolveClientUrl("~/admin/css/ui/jquery-ui-1.8.13.custom.css") %>" type="text/css" media="screen" />
+        <link rel="stylesheet" href="<%= ResolveClientUrl("~/admin/css/grid.css") %>" type="text/css" media="screen" />
+        <link href="<%= ResolveClientUrl("~/admin/css/kendo.common.min.css") %>" rel="stylesheet" />
+        <link href="<%= ResolveClientUrl("~/admin/css/kendo.silver.min.css") %>" rel="stylesheet" />
+        <link href="http://fonts.googleapis.com/css?family=Oswald" rel='stylesheet' type='text/css' />
+        <!-- Jquery -->
+        <script type="text/javascript" src="<%= ResolveClientUrl("~/admin/js/jquery-1.8.2.min.js") %>"></script>
+        <script type="text/javascript" src="<%= ResolveClientUrl("~/admin/js/jquery.menu.js") %>"></script>
+        <script type="text/javascript" src="<%= ResolveClientUrl("~/admin/js/jquery.accordion.js") %>"></script>
+        <script type="text/javascript" src="<%= ResolveClientUrl("~/admin/js/jquery.collapsible.js") %>"></script>
+        <script type="text/javascript" src="<%= ResolveClientUrl("~/admin/js/eye.js") %>"></script>
+        <script type="text/javascript" src="<%= ResolveClientUrl("~/admin/js/utils.js") %>"></script>
+        <script type="text/javascript" src="<%= ResolveClientUrl("~/admin/js/common.js") %>"></script>
+        <script type="text/javascript" src="<%= ResolveClientUrl("~/admin/js/jquery.numeric.js") %>"></script>
+        <script type="text/javascript" src="<%= ResolveClientUrl("~/admin/js/kendo.culture.es-ES.min.js") %>"></script>
+        <script type="text/javascript" src="<%= ResolveClientUrl("~/admin/js/kendo.all.min.js") %>"></script>
+
+        <script type="text/javascript">
+            setInterval(function () {
+                // Do something every 5 seconds
+                // 1. Make request to server
+                var url = document.domain;
+                $.post("http://" + url + "/keepSession.aspx");
+            }, 60000);
+
+            
+        </script>
+    </asp:PlaceHolder>
+    <asp:ContentPlaceHolder ID="HeaderContent" runat="server" />
+</head>
+<body>
+    <div id="wrapper">
+        <div id="header">
+            <div id="logo" class="droptips">
+                <a href="<%= ResolveUrl("~/admin/home.aspx") %>" title="Admin Panel">
+                    <img src="<%= ResolveUrl("~/admin/images/logo.png") %>" height="58" style="margin-left: 20px" alt="Admin Panel" /></a>
+            </div>
+            <div id="topbar"></div>
+            <div id="usermenu">
+                <a href="#" class="admin-user"><span class="mnu-indicator"></span>Bienvenido<span class="user-icon"></span></a>
+                <div class="sub-menu">
+                    <ul>
+                        <li><a href="<%= ResolveUrl("~/admin/logout.aspx") %>"><span class="icon-block-black locked-tw-b"></span>Cerrar Sesi&oacute;n</a></li>
+                    </ul>
+                    <div class="admin-thumb">
+                        <img src="<%= ResolveUrl("~/admin/images/user-thumb1.png") %>" alt="user" width="50" height="50" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="container">
+            <div id="sidebar">
+                <ul id="sidenav" class="menu collapsible" runat="server">
+                    <li><a href="<%= ResolveUrl("~/admin/home.aspx") %>"><span class="nav-icon dboard-icon"></span>Home</a></li>
+                    <li><a style="padding-left: 20px !important" href="<%= ResolveUrl("~/admin/modulos/custom/productos.aspx") %>"><span class="icon-block-black document-b"></span>Productos</a></li>
+                                                      <li><a style="padding-left: 20px !important" href="<%= ResolveUrl("~/admin/modulos/custom/preciosProductos.aspx") %>"><span class="icon-block-black tags-tw-b"></span>Precios Productos</a></li>
+
+                    <li><a style="padding-left: 20px !important" href="<%= ResolveUrl("~/admin/modulos/custom/pedidos.aspx") %>"><span class="icon-block-black shopping-cart-tr-b"></span>Pedidos</a></li>
+                    <li><a style="padding-left: 20px !important" href="<%= ResolveUrl("~/admin/modulos/custom/pedidosTraslado.aspx") %>"><span class="icon-block-black sign-post-b"></span>Pedidos Traslado</a></li>
+                    <li><a style="padding-left: 20px !important" href="<%= ResolveUrl("~/admin/modulos/custom/menues.aspx") %>"><span class="icon-block-black list-w-b"></span>Menues</a></li>
+                    <li><a style="padding-left: 20px !important" href="<%= ResolveUrl("~/admin/modulos/custom/restaurantes.aspx") %>"><span class="icon-block-black home-b"></span>Restaurantes</a></li>
+                    <li><a style="padding-left: 20px !important" href="<%= ResolveUrl("~/admin/modulos/custom/usuarios.aspx") %>"><span class="icon-block-black user-tw-b"></span>Operadores</a></li>
+                    <li><a style="padding-left: 20px !important" href="<%= ResolveUrl("~/admin/modulos/custom/usuariosPendientes.aspx") %>"><span class="icon-block-black users-tw-b"></span>Operadores pendientes</a></li>
+                    <li><a style="padding-left: 20px !important" href="<%= ResolveUrl("~/admin/modulos/custom/parametros.aspx") %>"><span class="icon-block-black cog-b"></span>Parámetros</a></li>
+                    <li><a style="padding-left: 20px !important" href="<%= ResolveUrl("~/admin/modulos/custom/proveedores.aspx") %>"><span class="icon-block-black tags-tw-b"></span>Proveedores</a></li>
+                    <li><a style="padding-left: 20px !important" href="<%= ResolveUrl("~/admin/modulos/custom/servicios.aspx") %>"><span class="icon-block-black safari-b"></span>Servicios</a></li>
+                    <li><a style="padding-left: 20px !important" href="<%= ResolveUrl("~/admin/modulos/custom/preciosServicios.aspx") %>"><span class="icon-block-black tags-tw-b"></span>Precios Servicios</a></li>
+                    <li><a style="padding-left: 20px !important" href="<%= ResolveUrl("~/admin/modulos/custom/preciosServiciosOperadores.aspx") %>"><span class="icon-block-black tags-tw-b"></span>Precios Servicios por Operadores </a></li>
+
+                    <li><a style="padding-left: 20px !important" href="<%= ResolveUrl("~/admin/modulos/custom/lugaresTraslados.aspx") %>"><span class="icon-block-black globe-b"></span>Lugares de Traslado</a></li>
+                    <li><a href="<%= ResolveUrl("~/admin/modulos/reportes/rpt-cupones.aspx") %>"><span class="nav-icon chart-icon"></span>Reporte cupones</a></li>
+                    <li runat="server" id="liSeguridad">
+					    <a href="#" style="padding-left: 18px !important"><span class="icon-block-black key-tw-b"></span> Seguridad</a>
+					    <ul class="acitem">
+						    <li><a href="<%= ResolveClientUrl("~/admin/modulos/seguridad/usuariosadmin.aspx") %>"><span class="list-icon">&nbsp;</span>Usuarios</a></li>
+					    </ul>
+				    </li>
+                </ul>
+            </div>
+            <div id="content">
+                <form id="Form1" runat="server">
+                    <asp:ScriptManager ID="mainScriptManager" EnablePartialRendering="true" runat="Server" />
+                    <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+                    <br />
+                </form>
+            </div>
+        </div>
+    </div>
+    <div id="footer-wrap">
+        <div id="footer">
+            <div class="footer-container">
+                <div class="footer-nav"></div>
+                <div class="copyright">
+                    2015 - GrupoBuziosResto
+                </div>
+            </div>
+            <div id="goTop">
+                <a href="#" class="tip-top" title="Go Top">Top</a>
+            </div>
+        </div>
+    </div>
+    <%--<iframe id="ifrmBlank" frameborder="0" width="0" height="0" runat="server" src="/admin/keepSession.aspx"></iframe>--%>
+     <script type="text/javascript">
+         $(document).ready(function () {
+             $(".numeric").numeric();
+         });
+    </script>
+</body>
+</html>
