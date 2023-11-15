@@ -27,7 +27,27 @@ public partial class traslados_paso3 : WebBasePage
             LoadInfo(this.idPedido);
            // if (this.idPedido > 0)
             LoadInfoPedido(this.idPedido);
-           
+            using (var dbContext = new ACHEEntities())
+            {
+                int SERVID = TrasladosCart.Instance.IDServicio;
+
+                var servici = dbContext.Servicios.Find(SERVID);
+                bool esPrivado = servici.EsPrivado;
+
+                if (servici != null)
+                {
+
+
+                    if (esPrivado)
+                    {
+                        titPrecio.InnerText = "Costo del Servicio Fijo por Auto";
+                    }
+                    else
+                    {
+                        titPrecio.InnerText = "Costo del Servicio Fijo por Persona";
+                    }
+                }
+            }
         }
     }
     

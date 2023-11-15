@@ -3,6 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "ACHE.Web", "ACHE.Web\", "{EEE2CC1D-0D4C-47FD-BBDD-D2E9A236103F}"
 	ProjectSection(WebsiteProperties) = preProject
+		Frontpage = "false"
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
 		ProjectReferences = "{2650d9e4-39f0-402a-95d4-1bdbe4c713b0}|ACHE.Model.dll;{7a7039b5-7c3d-4cae-8581-95feb281f315}|ACHE.Extensions.dll;"
 		Debug.AspNetCompiler.VirtualPath = "/ACHE.Web"

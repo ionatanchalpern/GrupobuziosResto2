@@ -28,7 +28,21 @@ public partial class traslados_paso1 : WebBasePage
                 LoadInfoPedido(this.idPedido);            
         }
     }
-    
+
+    [WebMethod(true)]
+    public static int GetMaxPasajeros(int IDServicio) 
+    {
+        int Maxpasajeros = 0;
+        using (var dbContext = new ACHEEntities())
+        {
+            var servicios = dbContext.Servicios.Find(IDServicio);
+            Maxpasajeros = servicios.MaxPasajeros;
+
+        }
+        return Maxpasajeros;
+        
+    }
+
     private void LoadInfoPedido(int id)
     {
         using (var dbContext = new ACHEEntities())

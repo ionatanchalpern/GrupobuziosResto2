@@ -419,7 +419,7 @@
   	          <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 destination last">
                             
                                    <span id="spnServicio" class="errorRequired"></span><br />
-                  <h1 class="sub" id="titPrecio">Costo del Servicio Fijo por Persona</h1>
+                 <h1 class="sub" id="titPrecio" runat="server"></h1>
                           <div id="divRegular" style="display:none" >
 		                  <div class="option">
 		                    <input type="radio" name="group" id="rdbRegular"/>

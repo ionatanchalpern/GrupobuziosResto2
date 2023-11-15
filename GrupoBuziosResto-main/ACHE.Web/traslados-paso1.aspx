@@ -65,7 +65,7 @@
 		        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 services">
 		          <h3>Seleccione el servicio de traslado</h3>
 		          <span class="select-default">
-		            <asp:DropDownList runat="server" ID="cmbServicio" ClientIDMode="Static">
+		            <asp:DropDownList runat="server" ID="cmbServicio" ClientIDMode="Static" onchange="return guardarId();">
                             <asp:ListItem Value="" Text="Seleccione un servicio" />
                         </asp:DropDownList>
 		          </span>
